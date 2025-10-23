@@ -1,0 +1,50 @@
+{
+  "name": "BlogPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "כותרת המאמר"
+    },
+    "subtitle": {
+      "type": "string",
+      "description": "כותרת משנה"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "תקציר המאמר"
+    },
+    "content": {
+      "type": "string",
+      "description": "תוכן המאמר (תומך ב-HTML)"
+    },
+    "imageUrl": {
+      "type": "string",
+      "description": "קישור לתמונה (URL)"
+    },
+    "author": {
+      "type": "string",
+      "description": "שם כותב המאמר"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "תגיות (מופרדות בפסיק)"
+    },
+    "keywords": {
+      "type": "string",
+      "description": "מילות מפתח ל-SEO"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "title",
+    "excerpt",
+    "content"
+  ]
+}

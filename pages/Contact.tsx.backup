@@ -1,0 +1,415 @@
+
+import React, { useState, useEffect } from 'react';
+import { ContactLead } from '../types/entities';
+import { mockAPI } from '@/lib/mockData';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import { Input, Textarea, Label } from '@/components/ui/input';
+import { Loader2, Mail, MapPin, Phone, Send, Star, Shield, Clock } from 'lucide-react';
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
+
+// Extracted ContactForm component
+function ContactForm({ siteSettings }) {
+    const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState(null);
+    const [success, setSuccess] = useState(false);
+
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        setFormData(prev => ({ ...prev, [id]: value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setError(null);
+        setSuccess(false);
+
+        try {
+            // Save to database (mock)
+            const result = await mockAPI.createContactLead(formData);
+            console.log('טופס נשלח בהצלחה:', formData);
+            
+            // הצלחה!
+            setSuccess(true);
+            setFormData({ name: '', phone: '', email: '', message: '' });
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Heebo', sans-serif; background-color: #f4f7fa; color: #334155; margin: 0; padding: 0; }
+        .container { max-width: 680px; margin: 20px auto; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07); border: 1px solid #e2e8f0; }
+        
+        .header { background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%); color: #ffffff; padding: 40px; text-align: center; }
+        .header h1 { font-size: 32px; font-weight: 900; margin: 0; }
+        .header p { font-size: 16px; opacity: 0.9; margin-top: 8px; }
+        
+        .content { padding: 30px 40px; }
+        .content-box { background-color: #f8fafc; border-radius: 12px; padding: 25px; margin-bottom: 25px; border: 1px solid #e2e8f0; }
+        .content-box h2 { font-size: 22px; font-weight: 700; color: #0369a1; margin-bottom: 20px; text-align: right; }
+        
+        .details-table { width: 100%; border-collapse: collapse; }
+        .details-table td { padding: 12px 0; vertical-align: top; border-bottom: 1px solid #e2e8f0; }
+        .details-table tr:last-child td { border-bottom: none; }
+        .details-table .label { font-weight: 700; color: #64748b; width: 120px; }
+        .details-table .value { color: #1e293b; font-weight: 400; }
+        .details-table .value a { color: #0369a1; text-decoration: none; font-weight: 700; }
+        .details-table .value a:hover { text-decoration: underline; }
+        
+        .message-section { margin-top: 25px; }
+        .message-content { white-space: pre-wrap; word-wrap: break-word; line-height: 1.7; }
+        
+        .action-button-container { text-align: center; margin: 30px 0; }
+        .action-button { background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 16px; display: inline-block; box-shadow: 0 6px 20px rgba(3, 105, 161, 0.3); }
+        
+        .footer { background-color: #0c1a2e; color: #94a3b8; padding: 30px; text-align: center; }
+        .footer p { margin: 0 0 10px 0; font-size: 14px; }
+        .footer a { color: #0ea5e9; text-decoration: none; }
+        .footer .logo-text { font-size: 20px; font-weight: 900; color: #ffffff; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Lockey24</h1>
+            <p>פנייה חדשה התקבלה מהאתר</p>
+        </div>
+        <div class="content">
+            <div class="content-box">
+                <h2>פרטי הפונה</h2>
+                <table class="details-table">
+                    <tr>
+                        <td class="label">שם מלא:</td>
+                        <td class="value">${formData.name}</td>
+                    </tr>
+                    <tr>
+                        <td class="label">אימייל:</td>
+                        <td class="value"><a href="mailto:${formData.email}">${formData.email}</a></td>
+                    </tr>
+                    <tr>
+                        <td class="label">טלפון:</td>
+                        <td class="value"><a href="tel:${formData.phone}">${formData.phone || 'לא צוין'}</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="content-box message-section">
+                <h2>הודעת הלקוח</h2>
+                <p class="message-content">${formData.message}</p>
+            </div>
+            
+            <div class="action-button-container">
+                <a href="mailto:${formData.email}" class="action-button">השב לפנייה</a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="logo-text">Lockey24</div>
+            <p>הפנייה נשלחה מהאתר בתאריך ${currentDate} בשעה ${currentTime}.</p>
+            <p>
+                <a href="https://automated-locker.com">בקר באתר</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+                `;
+
+                // 🚀 רשימת כל הכתובות שיקבלו את המייל
+                let allRecipients = [];
+                
+                // 1. כתובת האתר הראשית
+                // If siteSettings.email is undefined, it defaults to 'Automated.locker@gmail.com'
+                const mainEmail = siteSettings?.email || 'Automated.locker@gmail.com';
+                allRecipients.push(mainEmail);
+
+                // 2. חיפוש וחיבור של כל משתמשי האדמין
+                try {
+                    const { User } = await import('@/entities/User');
+                    const adminUsers = await User.filter({ role: 'admin' });
+                    const adminEmails = adminUsers.map(admin => admin.email).filter(Boolean);
+                    
+                    console.log(`נמצאו ${adminUsers.length} משתמשי אדמין:`, adminEmails);
+                    
+                    allRecipients = [...allRecipients, ...adminEmails];
+                } catch (adminError) {
+                    console.log("שגיאה בטעינת משתמשי אדמין:", adminError);
+                    // אם יש בעיה עם טעינת האדמינים, נמשיך עם הכתובת הראשית בלבד
+                }
+
+                // 3. הסרת כפילויות ווידוא שיש כתובות תקינות
+                allRecipients = [...new Set(allRecipients.filter(Boolean))];
+                
+                console.log(`שליחת מייל ל-${allRecipients.length} נמענים:`, allRecipients);
+
+                // 4. שליחת המייל לכל הנמענים
+                const emailPromises = allRecipients.map(async (recipientEmail) => {
+                    try {
+                        const { SendEmail } = await import('@/integrations/Core');
+                        return await SendEmail({
+                            to: recipientEmail,
+                            subject: emailSubject,
+                            body: emailBody,
+                            from_name: `Lockey24`
+                        });
+                    } catch (singleEmailError) {
+                        console.error(`שגיאה בשליחת מייל לכתובת ${recipientEmail}:`, singleEmailError);
+                        // Do not re-throw, allow other emails to send
+                        throw singleEmailError; // Re-throw to be caught by Promise.allSettled as 'rejected'
+                    }
+                });
+
+                const emailResults = await Promise.allSettled(emailPromises);
+                const successfulSends = emailResults.filter(result => result.status === 'fulfilled').length;
+                const failedSends = emailResults.filter(result => result.status === 'rejected').length;
+                
+        } catch (err) {
+            setError('אירעה שגיאה בשליחת הטופס. אנא נסו שוב מאוחר יותר.');
+            console.error("שגיאה בשליחת הטופס:", err);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                    <Label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">שם מלא *</Label>
+                    <Input 
+                        id="name" 
+                        placeholder="הכנס את שמך המלא" 
+                        value={formData.name} 
+                        onChange={handleChange} 
+                        required 
+                        className="bg-gray-800 border-gray-700 text-white h-12 md:h-14 text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-cyan-500 focus:ring-cyan-500 transition-all duration-300"
+                    />
+                </div>
+                <div className="space-y-2">
+                    <Label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">טלפון</Label>
+                    <Input 
+                        id="phone" 
+                        placeholder="050-1234567" 
+                        value={formData.phone} 
+                        onChange={handleChange} 
+                        className="bg-gray-800 border-gray-700 text-white h-12 md:h-14 text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-cyan-500 focus:ring-cyan-500 transition-all duration-300"
+                    />
+                </div>
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">כתובת אימייל *</Label>
+                <Input 
+                    id="email" 
+                    type="email" 
+                    placeholder="your@email.com" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    required  
+                    className="bg-gray-800 border-gray-700 text-white h-12 md:h-14 text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-cyan-500 focus:ring-cyan-500 transition-all duration-300"
+                />
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">ספרו לנו על הצרכים שלכם *</Label>
+                <Textarea 
+                    id="message" 
+                    placeholder="איזה סוג לוקר מעניין אותכם? איפה תרצו להתקין? כמה תאים אתם מחפשים? שתפו אותנו בפרטים..." 
+                    value={formData.message} 
+                    onChange={handleChange} 
+                    required  
+                    className="bg-gray-800 border-gray-700 text-white text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-cyan-500 focus:ring-cyan-500 transition-all duration-300 min-h-[120px] md:min-h-[140px] resize-none"
+                    rows={5}
+                />
+            </div>
+            
+            {success && (
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                >
+                    <Alert className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 border-green-400/30 text-green-100 rounded-xl backdrop-blur-sm">
+                        <Star className="h-5 w-5 md:h-6 md:w-6 text-green-400" />
+                        <AlertTitle className="text-lg md:text-xl font-bold">הפנייה נשלחה בהצלחה! 🎉</AlertTitle>
+                        <AlertDescription className="text-base md:text-lg">
+                            קיבלנו את הפנייה שלכם ושלחנו אותה למייל. נחזור אליכם תוך 24 שעות עם הצעה מותאמת אישית.
+                        </AlertDescription>
+                    </Alert>
+                </motion.div>
+            )}
+            
+            {error && (
+                <Alert className="bg-gradient-to-r from-red-900/50 to-pink-900/50 border-red-400/30 text-red-100 rounded-xl backdrop-blur-sm">
+                    <AlertTitle className="text-lg md:text-xl font-bold">שגיאה בשליחה</AlertTitle>
+                    <AlertDescription className="text-base md:text-lg">{error}</AlertDescription>
+                </Alert>
+            )}
+
+            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                <Button 
+                    type="submit" 
+                    disabled={isSubmitting} 
+                    size="lg" 
+                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-black font-bold py-4 md:py-6 rounded-2xl shadow-2xl border-0 disabled:opacity-50"
+                >
+                    {isSubmitting ? (
+                        <Loader2 className="w-5 h-5 md:w-6 md:h-6 animate-spin mx-auto" />
+                    ) : (
+                        <>
+                            <Send className="w-5 h-5 md:w-6 md:h-6 ml-2" />
+                            שלחו פנייה וקבלו הצעת מחיר
+                        </>
+                    )}
+                </Button>
+            </motion.div>
+
+            <p className="text-center text-gray-500 text-xs md:text-sm">
+                * שדות חובה • הפרטים שלכם מוגנים ולא יועברו לגורם שלישי
+            </p>
+        </form>
+    );
+}
+
+export default function ContactPage() {
+    // 🚀 נתונים סטטיים שזמינים מיידית - NO useEffect
+    const siteSettings = {
+        companyName: 'Lockey24',
+        phone: '050-123-4567',
+        address: 'רמת גן, תל אביב',
+        serviceArea: 'כל הארץ',
+        workingHours: '24/7 דרך טופס יצירת הקשר',
+        description: 'פתרונות לוקרים חכמים ואוטומטיים בהתאמה אישית',
+        website: 'https://automated-locker.com'
+    };
+
+    return (
+        <div 
+            dir="rtl" 
+            className="min-h-screen bg-black text-white"
+        >
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="max-w-6xl mx-auto">
+                    <motion.div 
+                        className="text-center mb-16"
+                        initial={{ opacity: 0, y: -30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <h1 className="text-5xl md:text-7xl font-black text-white mb-4">
+                            צרו קשר
+                            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                                לקבלת הצעת מחיר
+                            </span>
+                        </h1>
+                        <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                           מחפשים לוקר חכם לעסק, מוסד או ארגון? אנחנו כאן בשבילכם. הצוות שלנו מתמחה בהתקנת לוקרים אוטומטיים בכל רחבי הארץ, בהתאמה מלאה לצרכים שלכם. צרו קשר עוד היום לקבלת ייעוץ מקצועי והצעת מחיר משתלמת.
+                        </p>
+                    </motion.div>
+
+                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                        {/* Contact Form */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl"
+                        >
+                            <h2 className="text-3xl font-bold text-white mb-6">שלחו לנו פנייה</h2>
+                            <ContactForm siteSettings={siteSettings} />
+                        </motion.div>
+
+                        {/* Contact Info & Features */}
+                        <motion.div
+                            initial={{ opacity: 0, x: 50 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4 }}
+                            className="space-y-8"
+                        >
+                            <h3 className="text-3xl font-bold text-white mb-6">פרטי התקשרות</h3>
+                            <div className="space-y-6">
+                                {/* Contact Info Cards */}
+                                
+                                {siteSettings?.phone && (
+                                    <motion.div 
+                                        className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-gray-800/50 backdrop-blur-xl rounded-3xl p-6 md:p-8"
+                                        whileHover={{ 
+                                            scale: 1.02, 
+                                            boxShadow: '0 25px 50px rgba(6, 182, 212, 0.15)' 
+                                        }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <div className="flex items-start gap-4 md:gap-6">
+                                            <div className="p-3 md:p-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex-shrink-0">
+                                                <Phone className="w-6 h-6 md:w-8 md:h-8 text-black"/>
+                                            </div>
+                                            <div>
+                                                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">טלפון</h3>
+                                                <a 
+                                                    href={`tel:${siteSettings.phone}`}
+                                                    className="text-base md:text-lg font-medium text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                                                >
+                                                    {siteSettings.phone}
+                                                </a>
+                                                <p className="text-gray-400 mt-1 md:mt-2 text-sm md:text-base">{siteSettings.workingHours || 'זמינות לפי בקשה'}</p>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                )}
+                                
+                                <motion.div 
+                                    className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-gray-800/50 backdrop-blur-xl rounded-3xl p-6 md:p-8"
+                                    whileHover={{ 
+                                        scale: 1.02, 
+                                        boxShadow: '0 25px 50px rgba(6, 182, 212, 0.15)' 
+                                    }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <div className="flex items-start gap-4 md:gap-6">
+                                        <div className="p-3 md:p-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl flex-shrink-0">
+                                            <MapPin className="w-6 h-6 md:w-8 md:h-8 text-black"/>
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">מיקום</h3>
+                                            <p className="text-base md:text-lg font-medium text-cyan-400">{siteSettings?.address || 'רמת גן, תל אביב'}</p>
+                                            <p className="text-gray-400 mt-1 md:mt-2 text-sm md:text-base">{siteSettings?.serviceArea || 'אזור המרכז, ישראל'}</p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+
+                                {/* Features */}
+                                <div className="space-y-3 md:space-y-4">
+                                    <div className="flex items-center gap-3 md:gap-4 bg-gradient-to-r from-gray-900/30 to-black/30 border border-gray-800/30 backdrop-blur-sm p-3 md:p-4 rounded-xl">
+                                        <Shield className="w-5 h-5 md:w-6 md:h-6 text-cyan-400 flex-shrink-0" />
+                                        <span className="text-white font-medium text-sm md:text-base">ללא התחייבות</span>
+                                    </div>
+                                    <div className="flex items-center gap-3 md:gap-4 bg-gradient-to-r from-gray-900/30 to-black/30 border border-gray-800/30 backdrop-blur-sm p-3 md:p-4 rounded-xl">
+                                        <Clock className="w-5 h-5 md:w-6 md:h-6 text-cyan-400 flex-shrink-0" />
+                                        <span className="text-white font-medium text-sm md:text-base">מענה תוך 24 שעות</span>
+                                    </div>
+                                    <div className="flex items-center gap-3 md:gap-4 bg-gradient-to-r from-gray-900/30 to-black/30 border border-gray-800/30 backdrop-blur-sm p-3 md:p-4 rounded-xl">
+                                        <Star className="w-5 h-5 md:w-6 md:h-6 text-cyan-400 flex-shrink-0" />
+                                        <span className="text-white font-medium text-sm md:text-base">ייעוץ מקצועי חינם</span>
+                                    </div>
+                                </div>
+
+                                {/* Map */}
+                                <motion.div 
+                                    className="aspect-video rounded-3xl overflow-hidden border border-gray-800/50"
+                                    whileHover={{ scale: 1.02 }}
+                                    transition={{ duration: 0.3 }}
+                                >
+                                    <iframe 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54089.43329932168!2d34.78282767832032!3d32.076395200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d4c7d6d3d3e2d%3A0xce69819790623f5!2sRamat%20Gan!5e0!3m2!1sen!2sil!4v1688642054321!5m2!1sen!2sil" 
+                                        width="100%" 
+                                        height="100%" 
+                                        style={{border:0, filter: 'grayscale(100%) invert(92%) contrast(83%)'}} 
+                                        allowFullScreen="" 
+                                        loading="lazy" 
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        title="מפת מיקום Lockey24"
+                                    ></iframe>
+                                </motion.div>
+                            </div>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}

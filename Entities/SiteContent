@@ -1,0 +1,56 @@
+{
+  "name": "SiteContent",
+  "type": "object",
+  "properties": {
+    "section": {
+      "type": "string",
+      "description": "The section identifier (e.g., 'home-hero', 'about-mission')"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string",
+      "format": "uri"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonLink": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "items": {
+      "type": "array",
+      "description": "A list of items for sections like values or features.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "icon": {
+            "type": "string",
+            "description": "Lucide icon name (e.g., 'Target', 'Lightbulb')"
+          },
+          "title": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "section",
+    "title"
+  ]
+}

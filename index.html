@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="לוקרים חכמים אוטומטיים לעסקים, חדרי כושר ונקודות איסוף. פתרונות אחסון חכמים עם פתיחה מהנייד 24/7." />
+    <meta name="keywords" content="לוקרים חכמים, לוקר חכם, לוקרים אוטומטיים, smart lockers, אחסון חכם, לוקרים למשלוחים" />
+    <title>לוקרים חכמים בישראל – פתיחה מהנייד | Lockey24</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://automated-locker.com/" />
+    <meta property="og:title" content="לוקרים חכמים בישראל – Lockey24" />
+    <meta property="og:description" content="פתרונות לוקרים אוטומטיים לעסקים, חדרי כושר ונקודות איסוף. השכרת לוקרים חכמים החל מ-599₪" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="לוקרים חכמים בישראל – Lockey24" />
+    <meta name="twitter:description" content="פתרונות לוקרים אוטומטיים לעסקים, חדרי כושר ונקודות איסוף" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      #root {
+        min-height: 100vh;
+      }
+      
+      /* Loading spinner */
+      .loading-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(to bottom right, #1a1a1a, #000000);
+      }
+      
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(8, 145, 178, 0.2);
+        border-top-color: #0891b2;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

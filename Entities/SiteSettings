@@ -1,0 +1,45 @@
+{
+  "name": "SiteSettings",
+  "type": "object",
+  "properties": {
+    "companyName": {
+      "type": "string",
+      "description": "שם החברה",
+      "default": "Lockey24"
+    },
+    "phone": {
+      "type": "string",
+      "description": "מספר טלפון",
+      "default": "050-123-4567"
+    },
+    "address": {
+      "type": "string",
+      "description": "כתובת פיזית",
+      "default": "רמת גן, תל אביב"
+    },
+    "serviceArea": {
+      "type": "string",
+      "description": "איזור השירות",
+      "default": "כל הארץ"
+    },
+    "workingHours": {
+      "type": "string",
+      "description": "שעות פעילות",
+      "default": "24/7 דרך טופס יצירת הקשר"
+    },
+    "description": {
+      "type": "string",
+      "description": "תיאור החברה",
+      "default": "פתרונות לוקרים חכמים ואוטומטיים בהתאמה אישית"
+    },
+    "website": {
+      "type": "string",
+      "format": "uri",
+      "description": "כתובת האתר",
+      "default": "https://automated-locker.com"
+    }
+  },
+  "required": [
+    "companyName"
+  ]
+}

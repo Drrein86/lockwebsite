@@ -1,0 +1,27 @@
+{
+  "name": "ContentBlock",
+  "type": "object",
+  "properties": {
+    "identifier": {
+      "type": "string",
+      "description": "מזהה ייחודי של בלוק התוכן (באנגלית, לדוגמה: hero_title)"
+    },
+    "title": {
+      "type": "string",
+      "description": "כותרת ראשית של התוכן"
+    },
+    "content": {
+      "type": "string",
+      "description": "התוכן המרכזי (יכול להכיל HTML)"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "כתובת URL לתמונה (אופציונלי)"
+    }
+  },
+  "required": [
+    "identifier",
+    "title",
+    "content"
+  ]
+}

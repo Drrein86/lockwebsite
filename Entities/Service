@@ -1,0 +1,27 @@
+{
+  "name": "ContactLead",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "שם הפונה"
+    },
+    "phone": {
+      "type": "string",
+      "description": "מספר טלפון"
+    },
+    "email": {
+      "type": "string",
+      "description": "כתובת אימייל"
+    },
+    "message": {
+      "type": "string",
+      "description": "תוכן ההודעה"
+    }
+  },
+  "required": [
+    "name",
+    "email",
+    "message"
+  ]
+}

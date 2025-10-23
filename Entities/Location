@@ -1,0 +1,32 @@
+{
+  "name": "Location",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "שם המיקום"
+    },
+    "address": {
+      "type": "string",
+      "description": "כתובת מלאה"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "קו רוחב (Latitude)"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "קו אורך (Longitude)"
+    },
+    "description": {
+      "type": "string",
+      "description": "תיאור קצר על המיקום"
+    }
+  },
+  "required": [
+    "name",
+    "address",
+    "latitude",
+    "longitude"
+  ]
+}

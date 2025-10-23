@@ -1,0 +1,38 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "שם המוצר"
+    },
+    "description": {
+      "type": "string",
+      "description": "תיאור המוצר"
+    },
+    "price": {
+      "type": "number",
+      "description": "מחיר המוצר"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "כתובת URL של תמונת המוצר"
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "רשימת תכונות של המוצר"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true,
+      "description": "האם המוצר פעיל ומוצג באתר"
+    }
+  },
+  "required": [
+    "name",
+    "description"
+  ]
+}
