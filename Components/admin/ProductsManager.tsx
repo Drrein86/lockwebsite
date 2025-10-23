@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/Components/ui/button';
+import { Input } from '@/Components/ui/input';
+import { Textarea } from '@/Components/ui/textarea';
 import { Loader2, Plus, Trash2, Edit, Package } from 'lucide-react';
 
 export default function ProductsManager() {
@@ -53,7 +53,7 @@ export default function ProductsManager() {
                     isAvailable: true
                 }
             ];
-            setProducts(productList);
+        setProducts(productList);
         } catch (error) {
             console.error("Error fetching products:", error);
         }
@@ -70,7 +70,7 @@ export default function ProductsManager() {
             try {
                 // TODO: Replace with actual API call
                 console.log('Delete product:', id);
-                fetchProducts();
+        fetchProducts();
             } catch (error) {
                 console.error("Error deleting product:", error);
             }
@@ -315,7 +315,7 @@ export default function ProductsManager() {
                                     >
                                         <Trash2 className="h-4 w-4" />
                                     </Button>
-                                </div>
+                            </div>
                             </div>
                         </div>
                     ))}

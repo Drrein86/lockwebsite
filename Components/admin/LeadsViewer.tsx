@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/Components/ui/table';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/Components/ui/card';
+import { Skeleton } from '@/Components/ui/skeleton';
+import { Button } from '@/Components/ui/button';
 import { RefreshCw, AlertCircle } from 'lucide-react';
 import { format } from 'date-fns';
 

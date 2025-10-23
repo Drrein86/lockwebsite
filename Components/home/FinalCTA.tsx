@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/Components/ui/button';
 import { ArrowRight, MapPin, Clock } from 'lucide-react';
 
 // CTA Section - טעינה איטית

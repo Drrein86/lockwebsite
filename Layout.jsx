@@ -18,7 +18,7 @@ import {
     Settings
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/Components/ui/button';
 import AccessibilityMenu from './Components/AccessibilityMenu';
 
 const navLinks = [
