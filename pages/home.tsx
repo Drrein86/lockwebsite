@@ -160,10 +160,8 @@ function Hero({ content }) {
                     role="main"
                 >
                     <h1 className="relative text-6xl md:text-8xl font-black leading-none tracking-tighter">
-                        {/* Main Text with 3D Shadow */}
-                        <span className="relative block text-white drop-shadow-2xl" style={{
-                            textShadow: '0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(192, 38, 211, 0.2), 0 5px 15px rgba(0, 0, 0, 0.6)'
-                        }}>
+                        {/* Main Text */}
+                        <span className="relative block text-white">
                             לוקרים חכמים בישראל
                         </span>
                         
@@ -184,62 +182,10 @@ function Hero({ content }) {
                                 WebkitBackgroundClip: 'text',
                                 backgroundClip: 'text',
                                 color: 'transparent',
-                                filter: 'drop-shadow(0 0 35px rgba(147, 51, 234, 0.9)) drop-shadow(0 0 60px rgba(192, 38, 211, 0.5))',
                             }}
                         >
                             Lockey24 ⚡
                         </motion.span>
-                        
-                        {/* Multiple Sparkle Effects */}
-                        <motion.div
-                            className="absolute -top-6 right-1/4 w-4 h-4 bg-primary-400 rounded-full"
-                            animate={{
-                                scale: [0, 1.8, 0],
-                                opacity: [0, 1, 0],
-                                rotate: [0, 180, 360],
-                            }}
-                            transition={{
-                                duration: 2.5,
-                                repeat: Infinity,
-                                delay: 0,
-                            }}
-                        />
-                        <motion.div
-                            className="absolute top-1/4 -left-6 w-3 h-3 bg-secondary-400 rounded-full"
-                            animate={{
-                                scale: [0, 1.5, 0],
-                                opacity: [0, 1, 0],
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                delay: 0.8,
-                            }}
-                        />
-                        <motion.div
-                            className="absolute -bottom-4 right-1/3 w-3.5 h-3.5 bg-primary-300 rounded-full"
-                            animate={{
-                                scale: [0, 2, 0],
-                                opacity: [0, 1, 0],
-                            }}
-                            transition={{
-                                duration: 2.2,
-                                repeat: Infinity,
-                                delay: 1.5,
-                            }}
-                        />
-                        <motion.div
-                            className="absolute top-1/2 right-0 w-2 h-2 bg-secondary-300 rounded-full"
-                            animate={{
-                                scale: [0, 1.2, 0],
-                                opacity: [0, 1, 0],
-                            }}
-                            transition={{
-                                duration: 1.8,
-                                repeat: Infinity,
-                                delay: 0.4,
-                            }}
-                        />
                     </h1>
                     
                     <div className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto font-light bg-gray-900/30 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50">

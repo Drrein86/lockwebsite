@@ -43,9 +43,7 @@ export default function ServicesPage() {
                     >
                         <h1 className="relative text-5xl md:text-7xl font-black mb-6 leading-tight">
                             {/* Main Text */}
-                            <span className="relative block text-white drop-shadow-2xl" style={{
-                                textShadow: '0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(192, 38, 211, 0.2)'
-                            }}>
+                            <span className="relative block text-white">
                                 פתרונות לוקרים חכמים
                             </span>
                             
@@ -66,37 +64,10 @@ export default function ServicesPage() {
                                     WebkitBackgroundClip: 'text',
                                     backgroundClip: 'text',
                                     color: 'transparent',
-                                    filter: 'drop-shadow(0 0 30px rgba(147, 51, 234, 0.8))',
                                 }}
                             >
                                 לכל עסק ומטרה 💎
                             </motion.span>
-                            
-                            {/* Sparkle Effects */}
-                            <motion.div
-                                className="absolute -top-4 -right-4 w-3 h-3 bg-primary-400 rounded-full"
-                                animate={{
-                                    scale: [0, 1.5, 0],
-                                    opacity: [0, 1, 0],
-                                }}
-                                transition={{
-                                    duration: 2,
-                                    repeat: Infinity,
-                                    delay: 0,
-                                }}
-                            />
-                            <motion.div
-                                className="absolute bottom-0 left-1/4 w-2.5 h-2.5 bg-secondary-400 rounded-full"
-                                animate={{
-                                    scale: [0, 1.5, 0],
-                                    opacity: [0, 1, 0],
-                                }}
-                                transition={{
-                                    duration: 2,
-                                    repeat: Infinity,
-                                    delay: 1,
-                                }}
-                            />
                         </h1>
                         
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">

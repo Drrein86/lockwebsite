@@ -424,9 +424,7 @@ export default function ProductsPage() {
                         className="relative text-6xl md:text-8xl font-black mb-8 leading-none tracking-tighter"
                     >
                         {/* Main Text */}
-                        <span className="relative block text-white drop-shadow-2xl" style={{
-                            textShadow: '0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(192, 38, 211, 0.2)'
-                        }}>
+                        <span className="relative block text-white">
                             מבחר פתרונות
                         </span>
                         
@@ -447,49 +445,10 @@ export default function ProductsPage() {
                                 WebkitBackgroundClip: 'text',
                                 backgroundClip: 'text',
                                 color: 'transparent',
-                                filter: 'drop-shadow(0 0 30px rgba(147, 51, 234, 0.8))',
                             }}
                         >
                             לוקר חכם ✨
                         </motion.span>
-                        
-                        {/* Sparkle Effects */}
-                        <motion.div
-                            className="absolute -top-4 -right-4 w-3 h-3 bg-primary-400 rounded-full"
-                            animate={{
-                                scale: [0, 1.5, 0],
-                                opacity: [0, 1, 0],
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                delay: 0,
-                            }}
-                        />
-                        <motion.div
-                            className="absolute top-1/2 -left-8 w-2 h-2 bg-secondary-400 rounded-full"
-                            animate={{
-                                scale: [0, 1.5, 0],
-                                opacity: [0, 1, 0],
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                delay: 0.7,
-                            }}
-                        />
-                        <motion.div
-                            className="absolute -bottom-2 right-1/4 w-2.5 h-2.5 bg-primary-300 rounded-full"
-                            animate={{
-                                scale: [0, 1.5, 0],
-                                opacity: [0, 1, 0],
-                            }}
-                            transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                delay: 1.4,
-                            }}
-                        />
                     </motion.h1>
                     
                     <motion.div variants={fadeIn} className="mb-8">

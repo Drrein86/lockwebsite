@@ -147,9 +147,7 @@ export default function ContactPage() {
                     <div className="text-center mb-10 sm:mb-12 lg:mb-16">
                         <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6">
                             {/* Main Title */}
-                            <span className="relative block text-white drop-shadow-2xl" style={{
-                                textShadow: '0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(192, 38, 211, 0.2)'
-                            }}>
+                            <span className="relative block text-white">
                                 צור קשר
                             </span>
                             
@@ -170,37 +168,10 @@ export default function ContactPage() {
                                     WebkitBackgroundClip: 'text',
                                     backgroundClip: 'text',
                                     color: 'transparent',
-                                    filter: 'drop-shadow(0 0 30px rgba(147, 51, 234, 0.8))',
                                 }}
                             >
                                 נשמח לעזור 💜
                             </motion.span>
-                            
-                            {/* Sparkle Effects */}
-                            <motion.div
-                                className="absolute -top-2 -right-2 w-3 h-3 bg-primary-400 rounded-full"
-                                animate={{
-                                    scale: [0, 1.5, 0],
-                                    opacity: [0, 1, 0],
-                                }}
-                                transition={{
-                                    duration: 2,
-                                    repeat: Infinity,
-                                    delay: 0,
-                                }}
-                            />
-                            <motion.div
-                                className="absolute bottom-0 left-1/4 w-2.5 h-2.5 bg-secondary-400 rounded-full"
-                                animate={{
-                                    scale: [0, 1.5, 0],
-                                    opacity: [0, 1, 0],
-                                }}
-                                transition={{
-                                    duration: 2,
-                                    repeat: Infinity,
-                                    delay: 1,
-                                }}
-                            />
                         </h1>
                         <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-2xl mx-auto px-4">
                             מעוניינים בלוקרים חכמים לעסק שלכם? השאירו פרטים ונחזור אליכם בהקדם
