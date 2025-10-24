@@ -148,7 +148,7 @@ export default function ContactPage() {
                         <h1 className="relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6">
                             {/* Main Title */}
                             <span className="relative block text-white drop-shadow-2xl" style={{
-                                textShadow: '0 0 35px rgba(147, 51, 234, 0.5), 0 0 70px rgba(192, 38, 211, 0.3)'
+                                textShadow: '0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(192, 38, 211, 0.2)'
                             }}>
                                 צור קשר
                             </span>

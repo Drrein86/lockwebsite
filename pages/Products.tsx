@@ -425,7 +425,7 @@ export default function ProductsPage() {
                     >
                         {/* Main Text */}
                         <span className="relative block text-white drop-shadow-2xl" style={{
-                            textShadow: '0 0 40px rgba(147, 51, 234, 0.5), 0 0 80px rgba(192, 38, 211, 0.3)'
+                            textShadow: '0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(192, 38, 211, 0.2)'
                         }}>
                             מבחר פתרונות
                         </span>

@@ -162,7 +162,7 @@ function Hero({ content }) {
                     <h1 className="relative text-6xl md:text-8xl font-black leading-none tracking-tighter">
                         {/* Main Text with 3D Shadow */}
                         <span className="relative block text-white drop-shadow-2xl" style={{
-                            textShadow: '0 0 40px rgba(147, 51, 234, 0.6), 0 0 80px rgba(192, 38, 211, 0.4), 0 5px 15px rgba(0, 0, 0, 0.8)'
+                            textShadow: '0 0 30px rgba(147, 51, 234, 0.4), 0 0 60px rgba(192, 38, 211, 0.2), 0 5px 15px rgba(0, 0, 0, 0.6)'
                         }}>
                             לוקרים חכמים בישראל
                         </span>
