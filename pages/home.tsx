@@ -160,23 +160,6 @@ function Hero({ content }) {
                     role="main"
                 >
                     <h1 className="relative text-6xl md:text-8xl font-black leading-none tracking-tighter">
-                        {/* Glow Effect Layer */}
-                        <motion.div
-                            className="absolute inset-0 blur-3xl opacity-50"
-                            animate={{
-                                opacity: [0.3, 0.6, 0.3],
-                            }}
-                            transition={{
-                                duration: 3,
-                                repeat: Infinity,
-                                ease: "easeInOut"
-                            }}
-                        >
-                            <span className="bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-600 bg-clip-text text-transparent">
-                                לוקרים חכמים בישראל
-                            </span>
-                        </motion.div>
-                        
                         {/* Main Text with 3D Shadow */}
                         <span className="relative block text-white drop-shadow-2xl" style={{
                             textShadow: '0 0 40px rgba(147, 51, 234, 0.6), 0 0 80px rgba(192, 38, 211, 0.4), 0 5px 15px rgba(0, 0, 0, 0.8)'

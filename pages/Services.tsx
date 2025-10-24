@@ -42,23 +42,6 @@ export default function ServicesPage() {
                         transition={{ duration: 0.8 }}
                     >
                         <h1 className="relative text-5xl md:text-7xl font-black mb-6 leading-tight">
-                            {/* Glow Layer */}
-                            <motion.div
-                                className="absolute inset-0 blur-3xl opacity-40"
-                                animate={{
-                                    opacity: [0.3, 0.5, 0.3],
-                                }}
-                                transition={{
-                                    duration: 3,
-                                    repeat: Infinity,
-                                    ease: "easeInOut"
-                                }}
-                            >
-                                <span className="bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-600 bg-clip-text text-transparent">
-                                    פתרונות לוקרים חכמים
-                                </span>
-                            </motion.div>
-                            
                             {/* Main Text */}
                             <span className="relative block text-white drop-shadow-2xl" style={{
                                 textShadow: '0 0 35px rgba(147, 51, 234, 0.5), 0 0 70px rgba(192, 38, 211, 0.3)'
