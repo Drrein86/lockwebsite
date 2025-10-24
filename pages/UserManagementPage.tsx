@@ -105,7 +105,7 @@ export default function UserManagementPage() {
                                                         <SelectContent>
                                                             <SelectItem value="admin">
                                                                 <div className="flex items-center gap-2">
-                                                                    <Shield className="w-4 h-4 text-violet-600" />
+                                                                    <Shield className="w-4 h-4 text-blue-600" />
                                                                     מנהל
                                                                 </div>
                                                             </SelectItem>
@@ -126,7 +126,7 @@ export default function UserManagementPage() {
                         </div>
                     </CardContent>
                 </Card>
-                 <Card className="mt-8 bg-violet-50 border-blue-200">
+                 <Card className="mt-8 bg-blue-50 border-blue-200">
                     <CardHeader>
                         <CardTitle className="text-blue-800">איך מוסיפים מנהל חדש?</CardTitle>
                         <CardDescription className="text-blue-700">

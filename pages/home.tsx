@@ -58,10 +58,10 @@ function LockerCube() {
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-400/20 to-violet-600/20 border border-purple-400/30 rounded-3xl backdrop-blur-sm transform-gpu" 
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-400/20 to-blue-600/20 border border-cyan-400/30 rounded-3xl backdrop-blur-sm transform-gpu" 
                      style={{ transform: 'translateZ(40px)' }}>
                     <div className="flex flex-col items-center justify-center h-full text-white">
-                        <Lock className="w-16 h-16 mb-4 text-purple-400" aria-hidden="true" />
+                        <Lock className="w-16 h-16 mb-4 text-cyan-400" aria-hidden="true" />
                         <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse" aria-label="סטטוס פעיל"></div>
                     </div>
                 </div>
@@ -112,7 +112,7 @@ function Hero({ content }) {
             <div className="absolute inset-0 gpu-accelerate">
                 <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
                 <motion.div 
-                    className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl gpu-accelerate"
+                    className="absolute w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl gpu-accelerate"
                     animate={{
                         x: mousePosition.x * 100,
                         y: mousePosition.y * 100
@@ -123,7 +123,7 @@ function Hero({ content }) {
                     }}
                 />
                 <motion.div 
-                    className="absolute w-96 h-96 bg-violet-500/10 rounded-full blur-3xl gpu-accelerate"
+                    className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl gpu-accelerate"
                     animate={{
                         x: mousePosition.x * -50,
                         y: mousePosition.y * -50
@@ -161,7 +161,7 @@ function Hero({ content }) {
                 >
                     <h1 className="text-6xl md:text-8xl font-black text-white leading-none tracking-tighter">
                         לוקרים חכמים בישראל
-                        <span className="block bg-gradient-to-r from-purple-400 via-violet-500 to-purple-600 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                             Lockey24
                         </span>
                     </h1>
@@ -169,14 +169,14 @@ function Hero({ content }) {
                     <div className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto font-light bg-gray-900/30 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50">
                         <h2 className="sr-only">מה אנחנו מציעים - פתרונות לוקרים חכמים ואוטומטיים</h2>
                         <p className="mb-4">
-                            ברוכים הבאים ל־<strong className="text-purple-400">Lockey24</strong> – החברה המובילה בישראל לפתרונות אחסון חכמים. 
+                            ברוכים הבאים ל־<strong className="text-cyan-400">Lockey24</strong> – החברה המובילה בישראל לפתרונות אחסון חכמים. 
                             אנו מתמחים בהתקנה ופיתוח של <strong className="text-white">לוקרים חכמים (Smart Lockers)</strong> ו<strong className="text-white">לוקרים אוטומטיים</strong> לעסקים, מוסדות, קניונים, אוניברסיטאות וארגונים בכל רחבי הארץ.
                         </p>
                         <p className="mb-4">
                             הלוקרים שלנו מאפשרים פתיחה וניהול באמצעות אפליקציה ייעודית או קוד אישי, ומציעים חוויית שימוש מתקדמת ובטוחה.
                         </p>
                         <p>
-                            בין אם אתם מחפשים <strong className="text-purple-400">פתרון לוקר לעובדים</strong>, אחסון זמני ללקוחות, או <strong className="text-purple-400">מערכת לוקרים אוטומטיים לניהול חבילות</strong> – אצלנו תמצאו את המענה המושלם.
+                            בין אם אתם מחפשים <strong className="text-cyan-400">פתרון לוקר לעובדים</strong>, אחסון זמני ללקוחות, או <strong className="text-cyan-400">מערכת לוקרים אוטומטיים לניהול חבילות</strong> – אצלנו תמצאו את המענה המושלם.
                         </p>
                     </div>
 
@@ -188,7 +188,7 @@ function Hero({ content }) {
                             <Link to={createPageUrl('Products')}>
                                 <Button 
                                     size="lg" 
-                                    className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-blue-700 text-white font-semibold px-12 py-6 rounded-2xl text-lg shadow-2xl shadow-purple-500/25 border-0"
+                                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold px-12 py-6 rounded-2xl text-lg shadow-2xl shadow-cyan-500/25 border-0"
                                     aria-label="התחל עכשיו - קבל הצעת מחיר ללוקרים חכמים"
                                 >
                                     התחל עכשיו
@@ -224,15 +224,15 @@ function Hero({ content }) {
                         aria-label="סטטיסטיקות החברה"
                     >
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                            <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
                             <div className="text-gray-500 text-sm">זמינות מערכת</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                            <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
                             <div className="text-gray-500 text-sm">תמיכה טכנית</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-purple-400 mb-2">100+</div>
+                            <div className="text-3xl font-bold text-cyan-400 mb-2">100+</div>
                             <div className="text-gray-500 text-sm">לקוחות מרוצים</div>
                         </div>
                     </motion.div>
@@ -247,7 +247,7 @@ function Hero({ content }) {
             >
                 <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
                     <motion.div 
-                        className="w-1 h-3 bg-gradient-to-b from-purple-400 to-violet-600 rounded-full mt-2"
+                        className="w-1 h-3 bg-gradient-to-b from-cyan-400 to-blue-600 rounded-full mt-2"
                         animate={{ y: [0, 12, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
                     />
@@ -306,7 +306,7 @@ function FAQ() {
                 >
                     <h2 id="faq-title" className="text-5xl md:text-6xl font-black text-white mb-6">
                         שאלות נפוצות על
-                        <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                             לוקרים חכמים
                         </span>
                     </h2>
@@ -326,7 +326,7 @@ function FAQ() {
                             className="bg-gray-900/50 border border-gray-800 rounded-2xl p-6"
                         >
                             <details className="group">
-                                <summary className="flex justify-between items-center cursor-pointer text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                                <summary className="flex justify-between items-center cursor-pointer text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
                                     {item.question}
                                     <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90" />
                                 </summary>

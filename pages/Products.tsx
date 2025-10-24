@@ -24,7 +24,7 @@ const staggerContainer = {
 function ProductCard({ product, index }) {
     return (
         <motion.div 
-            className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 border border-gray-800/50 backdrop-blur-xl rounded-3xl overflow-hidden transition-all duration-700 hover:border-purple-400/50"
+            className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 border border-gray-800/50 backdrop-blur-xl rounded-3xl overflow-hidden transition-all duration-700 hover:border-cyan-400/50"
             variants={fadeIn}
             whileHover={{ 
                 y: -20, 
@@ -36,12 +36,12 @@ function ProductCard({ product, index }) {
             aria-labelledby={`product-title-${index}`}
         >
             {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-400/0 via-purple-400/5 to-purple-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             
             {/* Featured badge */}
             <div className="absolute top-6 right-6 z-10">
                 <motion.div 
-                    className="bg-gradient-to-r from-purple-400 to-violet-500 text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-sm"
+                    className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-4 py-2 rounded-full text-sm font-bold shadow-lg backdrop-blur-sm"
                     animate={{ scale: [1, 1.05, 1] }}
                     transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
                     aria-label="מוצר מומלץ"
@@ -70,7 +70,7 @@ function ProductCard({ product, index }) {
                 <div className="space-y-4">
                     <h3 
                         id={`product-title-${index}`}
-                        className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300"
+                        className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300"
                     >
                         {product.name}
                     </h3>
@@ -82,15 +82,15 @@ function ProductCard({ product, index }) {
                 {/* Premium features */}
                 <div className="space-y-3" role="list" aria-label="תכונות המוצר">
                     <div className="flex items-center gap-3 text-sm text-gray-300" role="listitem">
-                        <CheckCircle className="w-4 h-4 text-purple-400" aria-hidden="true" />
+                        <CheckCircle className="w-4 h-4 text-cyan-400" aria-hidden="true" />
                         <span>אפליקציה מותאמת כלולה</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm text-gray-300" role="listitem">
-                        <Shield className="w-4 h-4 text-purple-400" aria-hidden="true" />
+                        <Shield className="w-4 h-4 text-cyan-400" aria-hidden="true" />
                         <span>תחזוקה שוטפת ללא עלות</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm text-gray-300" role="listitem">
-                        <Clock className="w-4 h-4 text-purple-400" aria-hidden="true" />
+                        <Clock className="w-4 h-4 text-cyan-400" aria-hidden="true" />
                         <span>תמיכה טכנית 24/7</span>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ function ProductCard({ product, index }) {
                     <Link to={createPageUrl('Contact')}>
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             <Button 
-                                className="bg-gradient-to-r from-purple-400 to-violet-500 hover:from-purple-500 hover:to-violet-600 text-black font-bold px-6 py-3 rounded-xl shadow-lg border-0"
+                                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-black font-bold px-6 py-3 rounded-xl shadow-lg border-0"
                                 aria-label={`הזמן את ${product.name} עכשיו`}
                             >
                                 <ShoppingCart className="w-5 h-5 ml-2" aria-hidden="true" />
@@ -375,7 +375,7 @@ export default function ProductsPage() {
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
                 <motion.div 
-                    className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+                    className="absolute w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
                     animate={{
                         x: mousePosition.x * 50,
                         y: mousePosition.y * 50
@@ -386,7 +386,7 @@ export default function ProductsPage() {
                     }}
                 />
                 <motion.div 
-                    className="absolute w-96 h-96 bg-violet-500/10 rounded-full blur-3xl"
+                    className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
                     animate={{
                         x: mousePosition.x * -30,
                         y: mousePosition.y * -30
@@ -414,29 +414,29 @@ export default function ProductsPage() {
                     variants={staggerContainer}
                 >
                     <motion.div variants={fadeIn} className="mb-8">
-                        <div className="inline-block bg-gradient-to-r from-purple-400/20 to-violet-500/20 border border-purple-400/30 rounded-2xl p-6 mb-8 backdrop-blur-sm">
-                            <ShoppingCart className="w-16 h-16 text-purple-400 mx-auto" aria-hidden="true" />
+                        <div className="inline-block bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/30 rounded-2xl p-6 mb-8 backdrop-blur-sm">
+                            <ShoppingCart className="w-16 h-16 text-cyan-400 mx-auto" aria-hidden="true" />
                         </div>
                     </motion.div>
                     
                     <motion.h1 variants={fadeIn} className="text-6xl md:text-8xl font-black text-white mb-8 leading-none tracking-tighter">
                         מבחר פתרונות
-                        <span className="block bg-gradient-to-r from-purple-400 via-violet-500 to-purple-600 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                             לוקר חכם
                         </span>
                     </motion.h1>
                     
                     <motion.div variants={fadeIn} className="mb-8">
-                        <div className="w-32 h-1 bg-gradient-to-r from-purple-400 to-violet-500 mx-auto rounded-full"></div>
+                        <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
                     </motion.div>
                     
                     <motion.div variants={fadeIn} className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto font-light bg-gray-900/30 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50">
                         <h2 className="text-2xl font-bold text-white mb-4">קטלוג לוקרים חכמים ואוטומטיים למכירה והשכרה</h2>
                         <p className="mb-4">
-                            ברוכים הבאים לקטלוג המוצרים של Lockey24. כאן תמצאו מגוון <strong className="text-purple-400">לוקרים חכמים</strong> ו<strong className="text-purple-400">מערכות לוקרים אוטומטיים</strong>, המיועדים לספק פתרונות אחסון מתקדמים, יעילים ומאובטחים. כל מוצר שלנו מתוכנן לעמוד בסטנדרטים הגבוהים ביותר של איכות ועמידות.
+                            ברוכים הבאים לקטלוג המוצרים של Lockey24. כאן תמצאו מגוון <strong className="text-cyan-400">לוקרים חכמים</strong> ו<strong className="text-cyan-400">מערכות לוקרים אוטומטיים</strong>, המיועדים לספק פתרונות אחסון מתקדמים, יעילים ומאובטחים. כל מוצר שלנו מתוכנן לעמוד בסטנדרטים הגבוהים ביותר של איכות ועמידות.
                         </p>
                         <p>
-                            בין אם אתם מחפשים <a href="/Services" className="text-purple-400 hover:underline">לוקרים חכמים להשכרה</a> לחדר כושר או <a href="/Contact" className="text-purple-400 hover:underline">פתרון לוקרים אוטומטיים למכירה</a> עבור רשת קמעונאית, אנו מציעים מודלים גמישים הכוללים התקנה, תחזוקה, תמיכה טכנית ואפליקציה ייעודית.
+                            בין אם אתם מחפשים <a href="/Services" className="text-cyan-400 hover:underline">לוקרים חכמים להשכרה</a> לחדר כושר או <a href="/Contact" className="text-cyan-400 hover:underline">פתרון לוקרים אוטומטיים למכירה</a> עבור רשת קמעונאית, אנו מציעים מודלים גמישים הכוללים התקנה, תחזוקה, תמיכה טכנית ואפליקציה ייעודית.
                         </p>
                     </motion.div>
                 </motion.div>
@@ -469,7 +469,7 @@ export default function ProductsPage() {
                     role="region"
                     aria-label="קריאה לפעולה - פתרון מותאם אישית"
                 >
-                    <div className="absolute inset-0 bg-gradient-to-r from-purple-400/0 via-purple-400/5 to-purple-400/0 rounded-3xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/5 to-cyan-400/0 rounded-3xl"></div>
                     
                     <motion.div
                         animate={{ rotate: [0, 360] }}
@@ -477,12 +477,12 @@ export default function ProductsPage() {
                         className="inline-block mb-8"
                         aria-hidden="true"
                     >
-                        <Award className="w-16 h-16 text-purple-400" />
+                        <Award className="w-16 h-16 text-cyan-400" />
                     </motion.div>
                     
                     <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
                         מעוניינים בפתרון
-                        <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                             מותאם אישית?
                         </span>
                     </h2>
@@ -494,7 +494,7 @@ export default function ProductsPage() {
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             <Button 
                                 size="lg" 
-                                className="bg-gradient-to-r from-purple-400 to-violet-500 hover:from-purple-500 hover:to-violet-600 text-black font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl border-0"
+                                className="bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-black font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl border-0"
                                 aria-label="צור קשר לתכנון פתרון מותאם אישית"
                             >
                                 <ArrowRight className="ml-3 h-6 w-6" aria-hidden="true" />

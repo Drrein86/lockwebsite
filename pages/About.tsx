@@ -65,7 +65,7 @@ function Hero({ content }) {
             <div className="absolute inset-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
                 <motion.div 
-                    className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+                    className="absolute w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
                     animate={{
                         x: mousePosition.x * 100,
                         y: mousePosition.y * 100
@@ -76,7 +76,7 @@ function Hero({ content }) {
                     }}
                 />
                 <motion.div 
-                    className="absolute w-96 h-96 bg-violet-500/10 rounded-full blur-3xl"
+                    className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
                     animate={{
                         x: mousePosition.x * -50,
                         y: mousePosition.y * -50
@@ -104,39 +104,39 @@ function Hero({ content }) {
             >
                 <motion.div variants={fadeIn} className="mb-8">
                     <motion.div 
-                        className="inline-block p-6 rounded-2xl mb-8 bg-gradient-to-r from-purple-400/20 to-violet-500/20 border border-purple-400/30 backdrop-blur-sm"
+                        className="inline-block p-6 rounded-2xl mb-8 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/30 backdrop-blur-sm"
                         animate={{ rotate: [0, 360] }}
                         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                     >
-                        <Box className="w-16 h-16 text-purple-400" />
+                        <Box className="w-16 h-16 text-cyan-400" />
                     </motion.div>
                 </motion.div>
 
                 <motion.h1 variants={fadeIn} className="text-6xl md:text-8xl font-black mb-8 tracking-tighter text-white leading-none">
                     חברת Lockey24
-                    <span className="block bg-gradient-to-r from-purple-400 via-violet-500 to-purple-600 bg-clip-text text-transparent">
+                    <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                         לוקרים חכמים בישראל
                     </span>
                 </motion.h1>
                 
                 <motion.div variants={fadeIn} className="mb-8">
-                    <div className="w-32 h-1 bg-gradient-to-r from-purple-400 to-violet-500 mx-auto rounded-full"></div>
+                    <div className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
                 </motion.div>
                 
                 <motion.div variants={fadeIn} className="max-w-4xl mx-auto text-lg md:text-xl text-gray-300 mb-12 leading-relaxed font-light bg-gray-900/30 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50">
                     <p className="mb-4">
-                        <strong className="text-purple-400">Lockey24</strong> היא חברה ישראלית המתמחה ב<strong className="text-white">לוקרים חכמים</strong> ו<strong className="text-white">פתרונות אחסון אוטומטיים</strong>. 
+                        <strong className="text-cyan-400">Lockey24</strong> היא חברה ישראלית המתמחה ב<strong className="text-white">לוקרים חכמים</strong> ו<strong className="text-white">פתרונות אחסון אוטומטיים</strong>. 
                         מטרתנו היא לספק לעסקים, מוסדות וארגונים מערכות לוקר מתקדמות, נוחות ובטוחות לשימוש.
                     </p>
                     <p>
-                        הפתרונות שלנו כוללים <strong className="text-purple-400">לוקרים אוטומטיים עם פתיחה דיגיטלית</strong>, לוקרים לעובדים וללקוחות, וארונות אחסון חכמים המותאמים לעולם המודרני.
+                        הפתרונות שלנו כוללים <strong className="text-cyan-400">לוקרים אוטומטיים עם פתיחה דיגיטלית</strong>, לוקרים לעובדים וללקוחות, וארונות אחסון חכמים המותאמים לעולם המודרני.
                     </p>
                 </motion.div>
 
                 <motion.div variants={fadeIn} className="flex flex-col sm:flex-row gap-6 justify-center">
                     <Link to={createPageUrl(content.buttonLink)}>
                         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                            <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-purple-400 to-violet-500 hover:from-purple-500 hover:to-violet-600 text-black font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl border-0">
+                            <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-black font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl border-0">
                                 <Calendar className="ml-3 h-6 w-6" />
                                 {content.buttonText}
                             </Button>
@@ -180,14 +180,14 @@ function Mission({ content }) {
                                 className="text-center bg-gradient-to-br from-gray-900/50 to-black/50 border border-gray-800/50 backdrop-blur-xl rounded-2xl p-6"
                                 whileHover={{ scale: 1.05 }}
                             >
-                                <div className="text-5xl font-black text-purple-400 mb-2">24/7</div>
+                                <div className="text-5xl font-black text-cyan-400 mb-2">24/7</div>
                                 <div className="text-gray-400 font-medium">שירות זמין</div>
                             </motion.div>
                             <motion.div 
                                 className="text-center bg-gradient-to-br from-gray-900/50 to-black/50 border border-gray-800/50 backdrop-blur-xl rounded-2xl p-6"
                                 whileHover={{ scale: 1.05 }}
                             >
-                                <div className="text-5xl font-black text-purple-400 mb-2">100%</div>
+                                <div className="text-5xl font-black text-cyan-400 mb-2">100%</div>
                                 <div className="text-gray-400 font-medium">אוטומטי</div>
                             </motion.div>
                         </div>
@@ -215,7 +215,7 @@ function Values({ content }) {
                     <motion.h2 variants={fadeIn} className="text-5xl md:text-6xl font-black text-white mb-8 leading-tight">
                         {content.title}
                     </motion.h2>
-                    <motion.div variants={fadeIn} className="w-32 h-1 bg-gradient-to-r from-purple-400 to-violet-500 mx-auto rounded-full"></motion.div>
+                    <motion.div variants={fadeIn} className="w-32 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></motion.div>
                 </motion.div>
 
                 <motion.div 
@@ -241,11 +241,11 @@ function Values({ content }) {
                                 transition={{ duration: 0.6 }}
                             >
                                 <div className="mb-8">
-                                    <div className="inline-block p-6 bg-gradient-to-r from-purple-400 to-violet-500 rounded-2xl">
+                                    <div className="inline-block p-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl">
                                         <IconComponent className="w-8 h-8 text-black" />
                                     </div>
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-purple-400 transition-colors duration-300">{value.title}</h3>
+                                <h3 className="text-2xl font-bold text-white mb-6 group-hover:text-cyan-400 transition-colors duration-300">{value.title}</h3>
                                 <p className="text-gray-400 leading-relaxed font-light">{value.text}</p>
                             </motion.div>
                         )
@@ -296,10 +296,10 @@ function WhyChooseUs({ content }) {
                                 <motion.div 
                                     key={index}
                                     variants={fadeIn}
-                                    className="flex items-center gap-6 bg-gradient-to-r from-gray-800/50 to-black/50 border border-gray-700/50 backdrop-blur-sm p-6 rounded-2xl hover:border-purple-400/30 transition-all duration-300"
+                                    className="flex items-center gap-6 bg-gradient-to-r from-gray-800/50 to-black/50 border border-gray-700/50 backdrop-blur-sm p-6 rounded-2xl hover:border-cyan-400/30 transition-all duration-300"
                                     whileHover={{ scale: 1.02, x: 10 }}
                                 >
-                                    <div className="p-3 bg-gradient-to-r from-purple-400 to-violet-500 rounded-xl">
+                                    <div className="p-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl">
                                         <IconComponent className="w-6 h-6 text-black" />
                                     </div>
                                     <span className="text-white font-medium text-lg">{benefit.text}</span>
@@ -335,7 +335,7 @@ function CTA({ content }) {
             {/* Background effects */}
             <div className="absolute inset-0">
                 <motion.div 
-                    className="absolute w-96 h-96 bg-purple-500/20 rounded-full blur-3xl"
+                    className="absolute w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
                     animate={{
                         x: mousePosition.x * 100,
                         y: mousePosition.y * 100
@@ -346,7 +346,7 @@ function CTA({ content }) {
                     }}
                 />
                 <motion.div 
-                    className="absolute w-96 h-96 bg-violet-500/20 rounded-full blur-3xl"
+                    className="absolute w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"
                     animate={{
                         x: mousePosition.x * -50,
                         y: mousePosition.y * -50
@@ -375,7 +375,7 @@ function CTA({ content }) {
                     <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                         <Link to={createPageUrl(content.buttonLink)}>
                             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-purple-400 to-violet-500 hover:from-purple-500 hover:to-violet-600 text-black font-bold text-xl px-16 py-8 rounded-2xl shadow-2xl border-0">
+                                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-500 hover:to-blue-600 text-black font-bold text-xl px-16 py-8 rounded-2xl shadow-2xl border-0">
                                     <Calendar className="ml-3 h-6 w-6" />
                                     {content.buttonText}
                                 </Button>
@@ -383,7 +383,7 @@ function CTA({ content }) {
                         </Link>
                         
                         <div className="text-gray-300 text-lg font-medium flex items-center gap-3">
-                            <Shield className="w-6 h-6 text-purple-400" />
+                            <Shield className="w-6 h-6 text-cyan-400" />
                             <span>ללא התחייבות</span>
                         </div>
                     </div>
@@ -393,7 +393,7 @@ function CTA({ content }) {
                     >
                         <p className="text-gray-500 text-lg">
                             רמת גן, תל אביב, ישראל • 
-                            <a href="mailto:Automated.locker@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors font-medium ml-2">
+                            <a href="mailto:Automated.locker@gmail.com" className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium ml-2">
                                 Automated.locker@gmail.com
                             </a>
                         </p>
@@ -432,7 +432,7 @@ export default function AboutPage() {
     if (loading) {
         return (
             <div className="flex justify-center items-center h-screen bg-black">
-                <Loader2 className="w-16 h-16 animate-spin text-purple-400" />
+                <Loader2 className="w-16 h-16 animate-spin text-cyan-400" />
             </div>
         );
     }

@@ -31,7 +31,7 @@ const AdminPage = () => {
     return (
         <div dir="rtl" className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white p-4 sm:p-6 lg:p-8">
             <header className="mb-6 sm:mb-8">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     פאנל ניהול
                 </h1>
                 <p className="text-sm sm:text-base text-gray-400 mt-2">ניהול כל חלקי האתר במקום אחד</p>
@@ -42,7 +42,7 @@ const AdminPage = () => {
                 <aside className="lg:w-1/4">
                     <Card className="bg-gray-800/50 backdrop-blur-lg border-gray-700 shadow-xl">
                         <CardHeader>
-                            <CardTitle className="text-lg sm:text-xl text-purple-400">ניווט</CardTitle>
+                            <CardTitle className="text-lg sm:text-xl text-cyan-400">ניווט</CardTitle>
                         </CardHeader>
                         <CardContent>
                             {/* במובייל - Grid של 2 עמודות, בדסקטופ - רשימה */}
@@ -54,7 +54,7 @@ const AdminPage = () => {
                                         onClick={() => setActiveTab(tab.id)}
                                         className={`justify-start gap-2 text-sm sm:text-base transition-all duration-300 ${
                                             activeTab === tab.id 
-                                                ? 'bg-gradient-to-r from-purple-500 to-violet-600 text-white shadow-lg shadow-purple-500/30 font-bold' 
+                                                ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/30 font-bold' 
                                                 : 'hover:bg-gray-700 text-gray-300'
                                         }`}
                                     >
