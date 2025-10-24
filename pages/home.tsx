@@ -159,11 +159,104 @@ function Hero({ content }) {
                     className="space-y-8 max-w-4xl mx-auto"
                     role="main"
                 >
-                    <h1 className="text-6xl md:text-8xl font-black text-white leading-none tracking-tighter">
-                        לוקרים חכמים בישראל
-                        <span className="block bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-600 bg-clip-text text-transparent">
-                            Lockey24
+                    <h1 className="relative text-6xl md:text-8xl font-black leading-none tracking-tighter">
+                        {/* Glow Effect Layer */}
+                        <motion.div
+                            className="absolute inset-0 blur-3xl opacity-50"
+                            animate={{
+                                opacity: [0.3, 0.6, 0.3],
+                            }}
+                            transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                        >
+                            <span className="bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-600 bg-clip-text text-transparent">
+                                לוקרים חכמים בישראל
+                            </span>
+                        </motion.div>
+                        
+                        {/* Main Text with 3D Shadow */}
+                        <span className="relative block text-white drop-shadow-2xl" style={{
+                            textShadow: '0 0 40px rgba(147, 51, 234, 0.6), 0 0 80px rgba(192, 38, 211, 0.4), 0 5px 15px rgba(0, 0, 0, 0.8)'
+                        }}>
+                            לוקרים חכמים בישראל
                         </span>
+                        
+                        {/* Animated Gradient Brand Name */}
+                        <motion.span 
+                            className="relative block mt-2"
+                            animate={{
+                                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                            }}
+                            transition={{
+                                duration: 5,
+                                repeat: Infinity,
+                                ease: "linear"
+                            }}
+                            style={{
+                                backgroundImage: 'linear-gradient(90deg, #9333ea 0%, #c026d3 20%, #e879f9 40%, #f0abfc 60%, #c026d3 80%, #9333ea 100%)',
+                                backgroundSize: '200% 100%',
+                                WebkitBackgroundClip: 'text',
+                                backgroundClip: 'text',
+                                color: 'transparent',
+                                filter: 'drop-shadow(0 0 35px rgba(147, 51, 234, 0.9)) drop-shadow(0 0 60px rgba(192, 38, 211, 0.5))',
+                            }}
+                        >
+                            Lockey24 ⚡
+                        </motion.span>
+                        
+                        {/* Multiple Sparkle Effects */}
+                        <motion.div
+                            className="absolute -top-6 right-1/4 w-4 h-4 bg-primary-400 rounded-full"
+                            animate={{
+                                scale: [0, 1.8, 0],
+                                opacity: [0, 1, 0],
+                                rotate: [0, 180, 360],
+                            }}
+                            transition={{
+                                duration: 2.5,
+                                repeat: Infinity,
+                                delay: 0,
+                            }}
+                        />
+                        <motion.div
+                            className="absolute top-1/4 -left-6 w-3 h-3 bg-secondary-400 rounded-full"
+                            animate={{
+                                scale: [0, 1.5, 0],
+                                opacity: [0, 1, 0],
+                            }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: 0.8,
+                            }}
+                        />
+                        <motion.div
+                            className="absolute -bottom-4 right-1/3 w-3.5 h-3.5 bg-primary-300 rounded-full"
+                            animate={{
+                                scale: [0, 2, 0],
+                                opacity: [0, 1, 0],
+                            }}
+                            transition={{
+                                duration: 2.2,
+                                repeat: Infinity,
+                                delay: 1.5,
+                            }}
+                        />
+                        <motion.div
+                            className="absolute top-1/2 right-0 w-2 h-2 bg-secondary-300 rounded-full"
+                            animate={{
+                                scale: [0, 1.2, 0],
+                                opacity: [0, 1, 0],
+                            }}
+                            transition={{
+                                duration: 1.8,
+                                repeat: Infinity,
+                                delay: 0.4,
+                            }}
+                        />
                     </h1>
                     
                     <div className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto font-light bg-gray-900/30 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50">

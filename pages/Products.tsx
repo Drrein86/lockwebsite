@@ -419,11 +419,94 @@ export default function ProductsPage() {
                         </div>
                     </motion.div>
                     
-                    <motion.h1 variants={fadeIn} className="text-6xl md:text-8xl font-black text-white mb-8 leading-none tracking-tighter">
-                        מבחר פתרונות
-                        <span className="block bg-gradient-to-r from-primary-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                            לוקר חכם
+                    <motion.h1 
+                        variants={fadeIn} 
+                        className="relative text-6xl md:text-8xl font-black mb-8 leading-none tracking-tighter"
+                    >
+                        {/* Glow Effect Layer */}
+                        <motion.div
+                            className="absolute inset-0 blur-3xl opacity-50"
+                            animate={{
+                                opacity: [0.3, 0.6, 0.3],
+                            }}
+                            transition={{
+                                duration: 3,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                        >
+                            <span className="bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-600 bg-clip-text text-transparent">
+                                מבחר פתרונות
+                            </span>
+                        </motion.div>
+                        
+                        {/* Main Text */}
+                        <span className="relative block text-white drop-shadow-2xl" style={{
+                            textShadow: '0 0 40px rgba(147, 51, 234, 0.5), 0 0 80px rgba(192, 38, 211, 0.3)'
+                        }}>
+                            מבחר פתרונות
                         </span>
+                        
+                        {/* Gradient Shimmer Text */}
+                        <motion.span 
+                            className="relative block mt-2"
+                            animate={{
+                                backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                            }}
+                            transition={{
+                                duration: 5,
+                                repeat: Infinity,
+                                ease: "linear"
+                            }}
+                            style={{
+                                backgroundImage: 'linear-gradient(90deg, #9333ea 0%, #c026d3 25%, #e879f9 50%, #c026d3 75%, #9333ea 100%)',
+                                backgroundSize: '200% 100%',
+                                WebkitBackgroundClip: 'text',
+                                backgroundClip: 'text',
+                                color: 'transparent',
+                                filter: 'drop-shadow(0 0 30px rgba(147, 51, 234, 0.8))',
+                            }}
+                        >
+                            לוקר חכם ✨
+                        </motion.span>
+                        
+                        {/* Sparkle Effects */}
+                        <motion.div
+                            className="absolute -top-4 -right-4 w-3 h-3 bg-primary-400 rounded-full"
+                            animate={{
+                                scale: [0, 1.5, 0],
+                                opacity: [0, 1, 0],
+                            }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: 0,
+                            }}
+                        />
+                        <motion.div
+                            className="absolute top-1/2 -left-8 w-2 h-2 bg-secondary-400 rounded-full"
+                            animate={{
+                                scale: [0, 1.5, 0],
+                                opacity: [0, 1, 0],
+                            }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: 0.7,
+                            }}
+                        />
+                        <motion.div
+                            className="absolute -bottom-2 right-1/4 w-2.5 h-2.5 bg-primary-300 rounded-full"
+                            animate={{
+                                scale: [0, 1.5, 0],
+                                opacity: [0, 1, 0],
+                            }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: 1.4,
+                            }}
+                        />
                     </motion.h1>
                     
                     <motion.div variants={fadeIn} className="mb-8">

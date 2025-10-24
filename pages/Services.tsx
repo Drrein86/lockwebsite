@@ -41,11 +41,79 @@ export default function ServicesPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-                            פתרונות לוקרים חכמים
-                            <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
-                                לכל עסק ומטרה
+                        <h1 className="relative text-5xl md:text-7xl font-black mb-6 leading-tight">
+                            {/* Glow Layer */}
+                            <motion.div
+                                className="absolute inset-0 blur-3xl opacity-40"
+                                animate={{
+                                    opacity: [0.3, 0.5, 0.3],
+                                }}
+                                transition={{
+                                    duration: 3,
+                                    repeat: Infinity,
+                                    ease: "easeInOut"
+                                }}
+                            >
+                                <span className="bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-600 bg-clip-text text-transparent">
+                                    פתרונות לוקרים חכמים
+                                </span>
+                            </motion.div>
+                            
+                            {/* Main Text */}
+                            <span className="relative block text-white drop-shadow-2xl" style={{
+                                textShadow: '0 0 35px rgba(147, 51, 234, 0.5), 0 0 70px rgba(192, 38, 211, 0.3)'
+                            }}>
+                                פתרונות לוקרים חכמים
                             </span>
+                            
+                            {/* Animated Gradient Subtitle */}
+                            <motion.span 
+                                className="relative block mt-2"
+                                animate={{
+                                    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                                }}
+                                transition={{
+                                    duration: 5,
+                                    repeat: Infinity,
+                                    ease: "linear"
+                                }}
+                                style={{
+                                    backgroundImage: 'linear-gradient(90deg, #9333ea 0%, #c026d3 25%, #e879f9 50%, #c026d3 75%, #9333ea 100%)',
+                                    backgroundSize: '200% 100%',
+                                    WebkitBackgroundClip: 'text',
+                                    backgroundClip: 'text',
+                                    color: 'transparent',
+                                    filter: 'drop-shadow(0 0 30px rgba(147, 51, 234, 0.8))',
+                                }}
+                            >
+                                לכל עסק ומטרה 💎
+                            </motion.span>
+                            
+                            {/* Sparkle Effects */}
+                            <motion.div
+                                className="absolute -top-4 -right-4 w-3 h-3 bg-primary-400 rounded-full"
+                                animate={{
+                                    scale: [0, 1.5, 0],
+                                    opacity: [0, 1, 0],
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    delay: 0,
+                                }}
+                            />
+                            <motion.div
+                                className="absolute bottom-0 left-1/4 w-2.5 h-2.5 bg-secondary-400 rounded-full"
+                                animate={{
+                                    scale: [0, 1.5, 0],
+                                    opacity: [0, 1, 0],
+                                }}
+                                transition={{
+                                    duration: 2,
+                                    repeat: Infinity,
+                                    delay: 1,
+                                }}
+                            />
                         </h1>
                         
                         <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">

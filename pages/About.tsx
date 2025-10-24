@@ -112,11 +112,82 @@ function Hero({ content }) {
                     </motion.div>
                 </motion.div>
 
-                <motion.h1 variants={fadeIn} className="text-6xl md:text-8xl font-black mb-8 tracking-tighter text-white leading-none">
-                    חברת Lockey24
-                    <span className="block bg-gradient-to-r from-primary-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                        לוקרים חכמים בישראל
+                <motion.h1 
+                    variants={fadeIn} 
+                    className="relative text-6xl md:text-8xl font-black mb-8 tracking-tighter leading-none"
+                >
+                    {/* Glow Background */}
+                    <motion.div
+                        className="absolute inset-0 blur-3xl opacity-40"
+                        animate={{
+                            opacity: [0.3, 0.5, 0.3],
+                        }}
+                        transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                    >
+                        <span className="bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-600 bg-clip-text text-transparent">
+                            חברת Lockey24
+                        </span>
+                    </motion.div>
+                    
+                    {/* Main Title */}
+                    <span className="relative block text-white drop-shadow-2xl" style={{
+                        textShadow: '0 0 35px rgba(147, 51, 234, 0.5), 0 0 70px rgba(192, 38, 211, 0.3)'
+                    }}>
+                        חברת Lockey24
                     </span>
+                    
+                    {/* Animated Subtitle */}
+                    <motion.span 
+                        className="relative block mt-2"
+                        animate={{
+                            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+                        }}
+                        transition={{
+                            duration: 5,
+                            repeat: Infinity,
+                            ease: "linear"
+                        }}
+                        style={{
+                            backgroundImage: 'linear-gradient(90deg, #9333ea 0%, #c026d3 25%, #e879f9 50%, #c026d3 75%, #9333ea 100%)',
+                            backgroundSize: '200% 100%',
+                            WebkitBackgroundClip: 'text',
+                            backgroundClip: 'text',
+                            color: 'transparent',
+                            filter: 'drop-shadow(0 0 30px rgba(147, 51, 234, 0.8))',
+                        }}
+                    >
+                        לוקרים חכמים בישראל 🏆
+                    </motion.span>
+                    
+                    {/* Sparkles */}
+                    <motion.div
+                        className="absolute -top-4 right-1/4 w-3 h-3 bg-primary-400 rounded-full"
+                        animate={{
+                            scale: [0, 1.5, 0],
+                            opacity: [0, 1, 0],
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            delay: 0,
+                        }}
+                    />
+                    <motion.div
+                        className="absolute top-1/2 -left-6 w-2.5 h-2.5 bg-secondary-400 rounded-full"
+                        animate={{
+                            scale: [0, 1.5, 0],
+                            opacity: [0, 1, 0],
+                        }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            delay: 1,
+                        }}
+                    />
                 </motion.h1>
                 
                 <motion.div variants={fadeIn} className="mb-8">
