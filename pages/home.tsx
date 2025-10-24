@@ -161,7 +161,7 @@ function Hero({ content }) {
                 >
                     <h1 className="text-6xl md:text-8xl font-black text-white leading-none tracking-tighter">
                         לוקרים חכמים בישראל
-                        <span className="block bg-gradient-to-r from-primary-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-primary-400 via-secondary-500 to-primary-600 bg-clip-text text-transparent">
                             Lockey24
                         </span>
                     </h1>

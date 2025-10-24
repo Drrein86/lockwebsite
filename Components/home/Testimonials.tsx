@@ -37,7 +37,7 @@ export default function Testimonials() {
                 >
                     <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
                         מה אומרים
-                        <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-primary-400 to-secondary-500 bg-clip-text text-transparent">
                             הלקוחות
                         </span>
                     </h2>
@@ -59,7 +59,7 @@ export default function Testimonials() {
                                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                                 ))}
                             </div>
-                            <Quote className="w-8 h-8 text-purple-400 mb-4" />
+                            <Quote className="w-8 h-8 text-primary-400 mb-4" />
                             <p className="text-gray-300 mb-6 leading-relaxed text-lg">
                                 {testimonial.content}
                             </p>

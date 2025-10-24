@@ -25,7 +25,7 @@ export default function HowItWorks() {
         <section className="py-32 bg-black relative overflow-hidden" id="how-it-works">
             {/* Background decorations */}
             <div className="absolute inset-0">
-                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/5 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/5 rounded-full blur-3xl"></div>
             </div>
 
@@ -39,7 +39,7 @@ export default function HowItWorks() {
                 >
                     <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
                         איך זה
-                        <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-primary-400 to-secondary-500 bg-clip-text text-transparent">
                             עובד?
                         </span>
                     </h2>
@@ -56,7 +56,7 @@ export default function HowItWorks() {
                             transition={{ duration: 0.8, delay: index * 0.2 }}
                         >
                             <div className="flex-shrink-0">
-                                <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-violet-600 rounded-full flex items-center justify-center text-2xl font-black text-white">
+                                <div className="w-24 h-24 bg-gradient-to-r from-primary-500 to-secondary-600 rounded-full flex items-center justify-center text-2xl font-black text-white">
                                     {step.number}
                                 </div>
                             </div>
@@ -67,7 +67,7 @@ export default function HowItWorks() {
                             
                             {/* Connection line */}
                             {index < steps.length - 1 && (
-                                <div className="absolute left-12 mt-24 w-0.5 h-16 bg-gradient-to-b from-purple-500 to-violet-600"></div>
+                                <div className="absolute left-12 mt-24 w-0.5 h-16 bg-gradient-to-b from-primary-500 to-secondary-600"></div>
                             )}
                         </motion.div>
                     ))}
