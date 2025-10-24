@@ -52,7 +52,7 @@ function ContactForm() {
                         value={formData.name} 
                         onChange={handleChange} 
                         required 
-                        className="bg-gray-800 border-gray-700 text-white h-12 md:h-14 text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-cyan-500 focus:ring-cyan-500 transition-all duration-300"
+                        className="bg-gray-800 border-gray-700 text-white h-12 md:h-14 text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-primary-500 focus:ring-primary-500 transition-all duration-300"
                     />
                 </div>
                 <div className="space-y-2">
@@ -62,7 +62,7 @@ function ContactForm() {
                         placeholder="050-1234567" 
                         value={formData.phone} 
                         onChange={handleChange} 
-                        className="bg-gray-800 border-gray-700 text-white h-12 md:h-14 text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-cyan-500 focus:ring-cyan-500 transition-all duration-300"
+                        className="bg-gray-800 border-gray-700 text-white h-12 md:h-14 text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-primary-500 focus:ring-primary-500 transition-all duration-300"
                     />
                 </div>
             </div>
@@ -75,7 +75,7 @@ function ContactForm() {
                     value={formData.email} 
                     onChange={handleChange} 
                     required  
-                    className="bg-gray-800 border-gray-700 text-white h-12 md:h-14 text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-cyan-500 focus:ring-cyan-500 transition-all duration-300"
+                    className="bg-gray-800 border-gray-700 text-white h-12 md:h-14 text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-primary-500 focus:ring-primary-500 transition-all duration-300"
                 />
             </div>
             <div className="space-y-2">
@@ -86,7 +86,7 @@ function ContactForm() {
                     value={formData.message} 
                     onChange={handleChange} 
                     required  
-                    className="bg-gray-800 border-gray-700 text-white text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-cyan-500 focus:ring-cyan-500 transition-all duration-300 min-h-[120px] md:min-h-[140px] resize-none"
+                    className="bg-gray-800 border-gray-700 text-white text-base md:text-lg rounded-xl backdrop-blur-sm focus:border-primary-500 focus:ring-primary-500 transition-all duration-300 min-h-[120px] md:min-h-[140px] resize-none"
                     rows={5}
                 />
             </div>
@@ -116,7 +116,7 @@ function ContactForm() {
                 <Button 
                     type="submit" 
                     disabled={isSubmitting} 
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg text-lg"
+                className="w-full bg-gradient-to-r from-primary-500 to-secondary-600 hover:from-primary-600 hover:to-secondary-700 text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg text-lg"
                 >
                     {isSubmitting ? (
                     <>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                     <div className="text-center mb-10 sm:mb-12 lg:mb-16">
                         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6">
                             צור קשר
-                            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mt-2">
+                            <span className="block bg-gradient-to-r from-primary-400 to-secondary-500 bg-clip-text text-transparent mt-2">
                                 נשמח לעזור
                             </span>
                         </h1>
@@ -162,31 +162,31 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8 sm:mt-12">
                         <motion.div 
-                            className="bg-gradient-to-br from-gray-900/80 to-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20"
+                            className="bg-gradient-to-br from-gray-900/80 to-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl p-6 text-center hover:border-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/20"
                             whileHover={{ scale: 1.02, y: -5 }}
                         >
-                            <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Phone className="w-8 h-8 text-cyan-400" />
+                            <div className="bg-gradient-to-br from-primary-500/20 to-secondary-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <Phone className="w-8 h-8 text-primary-400" />
                             </div>
                             <h3 className="text-lg font-bold mb-2 text-white">טלפון</h3>
                             <p className="text-sm text-gray-400">זמינות 24/7</p>
                         </motion.div>
                         <motion.div 
-                            className="bg-gradient-to-br from-gray-900/80 to-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20"
+                            className="bg-gradient-to-br from-gray-900/80 to-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl p-6 text-center hover:border-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/20"
                             whileHover={{ scale: 1.02, y: -5 }}
                         >
-                            <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <Mail className="w-8 h-8 text-cyan-400" />
+                            <div className="bg-gradient-to-br from-primary-500/20 to-secondary-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <Mail className="w-8 h-8 text-primary-400" />
                             </div>
                             <h3 className="text-lg font-bold mb-2 text-white">אימייל</h3>
                             <p className="text-sm text-gray-400">מענה תוך 24 שעות</p>
                         </motion.div>
                         <motion.div 
-                            className="bg-gradient-to-br from-gray-900/80 to-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20"
+                            className="bg-gradient-to-br from-gray-900/80 to-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl p-6 text-center hover:border-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/20"
                             whileHover={{ scale: 1.02, y: -5 }}
                         >
-                            <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <MapPin className="w-8 h-8 text-cyan-400" />
+                            <div className="bg-gradient-to-br from-primary-500/20 to-secondary-600/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <MapPin className="w-8 h-8 text-primary-400" />
                             </div>
                             <h3 className="text-lg font-bold mb-2 text-white">מיקום</h3>
                             <p className="text-sm text-gray-400">שירות בכל הארץ</p>

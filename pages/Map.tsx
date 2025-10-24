@@ -50,7 +50,7 @@ export default function MapPage() {
     const getTypeColor = (type) => {
         switch (type) {
             case 'תיבת דואר': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
-            case 'לוקר חכם': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30';
+            case 'לוקר חכם': return 'bg-cyan-500/20 text-primary-400 border-cyan-500/30';
             case 'עמדת מכירה': return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
             case 'מחסן חכם': return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
             default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
@@ -81,8 +81,8 @@ export default function MapPage() {
                         }}
                     >
                         <motion.div variants={fadeIn} className="mb-6">
-                            <div className="inline-block bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-4 mb-6">
-                                <MapPin className="w-16 h-16 text-cyan-400 mx-auto" />
+                            <div className="inline-block bg-gradient-to-r from-primary-500/20 to-secondary-500/20 backdrop-blur-sm rounded-2xl p-4 mb-6">
+                                <MapPin className="w-16 h-16 text-primary-400 mx-auto" />
                             </div>
                         </motion.div>
                         
@@ -91,7 +91,7 @@ export default function MapPage() {
                         </motion.h1>
                         
                         <motion.div variants={fadeIn} className="mb-8">
-                            <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+                            <div className="w-32 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 mx-auto rounded-full"></div>
                         </motion.div>
                         
                         <motion.p variants={fadeIn} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -154,7 +154,7 @@ export default function MapPage() {
                                 transition={{ duration: 0.8 }}
                             >
                                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                                    <Navigation className="w-8 h-8 text-cyan-400" />
+                                    <Navigation className="w-8 h-8 text-primary-400" />
                                     מיקומים פעילים
                                 </h2>
                                 
@@ -187,7 +187,7 @@ export default function MapPage() {
                                             >
                                                 <div className="flex items-start justify-between mb-3">
                                                     <h3 className="text-xl font-bold text-white">{location.name}</h3>
-                                                    <MapPin className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                                                    <MapPin className="w-5 h-5 text-primary-400 flex-shrink-0" />
                                                 </div>
                                                 
                                                 <p className="text-gray-400 mb-3">{location.address}</p>
@@ -216,11 +216,11 @@ export default function MapPage() {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.3 }}
-                                className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-3xl p-8 border border-cyan-500/20"
+                                className="bg-gradient-to-r from-primary-500/10 to-secondary-500/10 backdrop-blur-sm rounded-3xl p-8 border border-cyan-500/20"
                             >
                                 <h3 className="text-2xl font-bold text-white mb-6 text-center">רוצים לוקר במיקום שלכם?</h3>
                                 <div className="space-y-4 text-center">
-                                    <div className="flex items-center justify-center gap-3 text-cyan-400">
+                                    <div className="flex items-center justify-center gap-3 text-primary-400">
                                         <Mail className="w-5 h-5" />
                                         <span>Automated.locker@gmail.com</span>
                                     </div>

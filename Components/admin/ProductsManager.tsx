@@ -122,7 +122,7 @@ export default function ProductsManager() {
     if (isLoading) {
         return (
             <div className="flex justify-center items-center py-12">
-                <Loader2 className="h-8 w-8 animate-spin text-cyan-400" />
+                <Loader2 className="h-8 w-8 animate-spin text-primary-400" />
             </div>
         );
     }
@@ -226,7 +226,7 @@ export default function ProductsManager() {
                             name="isActive" 
                             checked={currentProduct.isActive} 
                             onChange={(e) => setCurrentProduct(p => ({...p, isActive: e.target.checked}))} 
-                            className="w-5 h-5 text-cyan-500 bg-gray-700 border-gray-600 rounded focus:ring-cyan-500"
+                            className="w-5 h-5 text-primary-500 bg-gray-700 border-gray-600 rounded focus:ring-cyan-500"
                         />
                         <label htmlFor="isActiveProduct" className="text-white font-medium cursor-pointer">
                             הצג מוצר זה באתר (פעיל)
@@ -236,7 +236,7 @@ export default function ProductsManager() {
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-700">
                         <Button 
                             type="submit" 
-                            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold"
+                            className="bg-gradient-to-r from-primary-500 to-secondary-600 hover:from-primary-600 hover:to-secondary-700 text-white font-bold"
                         >
                             💾 שמור מוצר
                         </Button>
@@ -263,7 +263,7 @@ export default function ProductsManager() {
                 </div>
                 <Button 
                     onClick={handleNew}
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold shadow-lg"
+                    className="bg-gradient-to-r from-primary-500 to-secondary-600 hover:from-primary-600 hover:to-secondary-700 text-white font-bold shadow-lg"
                 >
                     <Plus className="ml-2 h-5 w-5" /> מוצר חדש
                 </Button>
@@ -273,7 +273,7 @@ export default function ProductsManager() {
                 <div className="text-center py-12 bg-gray-800/30 rounded-xl border border-gray-700">
                     <Package className="w-16 h-16 text-gray-600 mx-auto mb-4" />
                     <p className="text-gray-400 mb-4">אין מוצרים עדיין</p>
-                    <Button onClick={handleNew} variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10">
+                    <Button onClick={handleNew} variant="outline" className="border-primary-500/50 text-primary-400 hover:bg-cyan-500/10">
                         <Plus className="ml-2 h-4 w-4" /> צור מוצר ראשון
                     </Button>
                 </div>
@@ -282,12 +282,12 @@ export default function ProductsManager() {
                     {products.map(product => (
                         <div 
                             key={product.id} 
-                            className="p-4 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
+                            className="p-4 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-primary-500/50 transition-all duration-300"
                         >
                             <div className="flex justify-between items-start mb-3">
                                 <div className="flex-1">
                                     <h3 className="text-lg font-bold text-white mb-1">{product.name}</h3>
-                                    {product.category && <span className="text-xs text-cyan-400 bg-cyan-500/20 px-2 py-1 rounded">{product.category}</span>}
+                                    {product.category && <span className="text-xs text-primary-400 bg-cyan-500/20 px-2 py-1 rounded">{product.category}</span>}
                                 </div>
                             </div>
                             
@@ -295,7 +295,7 @@ export default function ProductsManager() {
                             
                             <div className="flex justify-between items-center">
                                 <div className="text-sm">
-                                    {product.price && <div className="text-cyan-400 font-bold">₪{product.price}</div>}
+                                    {product.price && <div className="text-primary-400 font-bold">₪{product.price}</div>}
                                     {product.priceMonthly && <div className="text-gray-500">או ₪{product.priceMonthly}/חודש</div>}
                                 </div>
                                 <div className="flex gap-2">
@@ -303,7 +303,7 @@ export default function ProductsManager() {
                                         variant="outline" 
                                         size="sm" 
                                         onClick={() => handleEdit(product)}
-                                        className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10"
+                                        className="border-primary-500/50 text-primary-400 hover:bg-cyan-500/10"
                                     >
                                         <Edit className="h-4 w-4" />
                                     </Button>
