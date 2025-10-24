@@ -114,7 +114,7 @@ export default function ContentManager() {
     if (isLoading) {
         return (
             <div className="flex justify-center items-center py-12">
-                <Loader2 className="h-8 w-8 animate-spin text-cyan-400" />
+                <Loader2 className="h-8 w-8 animate-spin text-purple-400" />
             </div>
         );
     }
@@ -126,7 +126,7 @@ export default function ContentManager() {
                     {currentContent.id ? '✏️ עריכת בלוק תוכן' : '➕ בלוק תוכן חדש'}
                 </h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 mb-6">
+                    <div className="bg-violet-500/10 border border-violet-500/30 rounded-lg p-4 mb-6">
                         <p className="text-sm text-blue-300">
                             <strong>💡 טיפ:</strong> השתמש ב-Key ייחודי כמו <code className="bg-gray-800 px-2 py-1 rounded">home-hero</code>, <code className="bg-gray-800 px-2 py-1 rounded">about-mission</code> וכו' כדי לזהות תוכן בדפים.
                         </p>
@@ -213,7 +213,7 @@ export default function ContentManager() {
                             name="isActive" 
                             checked={currentContent.isActive} 
                             onChange={(e) => setCurrentContent(c => ({...c, isActive: e.target.checked}))} 
-                            className="w-5 h-5 text-cyan-500 bg-gray-700 border-gray-600 rounded focus:ring-cyan-500"
+                            className="w-5 h-5 text-purple-500 bg-gray-700 border-gray-600 rounded focus:ring-purple-500"
                         />
                         <label htmlFor="isActiveContent" className="text-white font-medium cursor-pointer">
                             הצג תוכן זה באתר (פעיל)
@@ -223,7 +223,7 @@ export default function ContentManager() {
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-700">
                         <Button 
                             type="submit" 
-                            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold"
+                            className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white font-bold"
                         >
                             💾 שמור תוכן
                         </Button>
@@ -250,7 +250,7 @@ export default function ContentManager() {
                 </div>
                 <Button 
                     onClick={handleNew}
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold shadow-lg"
+                    className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white font-bold shadow-lg"
                 >
                     <Plus className="ml-2 h-5 w-5" /> בלוק תוכן חדש
                 </Button>
@@ -260,7 +260,7 @@ export default function ContentManager() {
                 <div className="text-center py-12 bg-gray-800/30 rounded-xl border border-gray-700">
                     <FileText className="w-16 h-16 text-gray-600 mx-auto mb-4" />
                     <p className="text-gray-400 mb-4">אין בלוקי תוכן עדיין</p>
-                    <Button onClick={handleNew} variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10">
+                    <Button onClick={handleNew} variant="outline" className="border-purple-500/50 text-purple-400 hover:bg-purple-500/10">
                         <Plus className="ml-2 h-4 w-4" /> צור בלוק תוכן ראשון
                     </Button>
                 </div>
@@ -269,11 +269,11 @@ export default function ContentManager() {
                     {contents.map(content => (
                         <div 
                             key={content.id} 
-                            className="p-4 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-300 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3"
+                            className="p-4 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-purple-500/50 transition-all duration-300 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3"
                         >
                             <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-1">
-                                    <code className="text-xs bg-gray-900 text-cyan-400 px-2 py-1 rounded">{content.key}</code>
+                                    <code className="text-xs bg-gray-900 text-purple-400 px-2 py-1 rounded">{content.key}</code>
                                 </div>
                                 {content.title && <h3 className="text-lg font-bold text-white mb-1">{content.title}</h3>}
                                 {content.subtitle && <p className="text-sm text-gray-400 mb-1">{content.subtitle}</p>}
@@ -284,7 +284,7 @@ export default function ContentManager() {
                                     variant="outline" 
                                     size="sm" 
                                     onClick={() => handleEdit(content)}
-                                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10"
+                                    className="border-purple-500/50 text-purple-400 hover:bg-purple-500/10"
                                 >
                                     <Edit className="h-4 w-4 ml-1" /> ערוך
                                 </Button>

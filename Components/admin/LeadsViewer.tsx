@@ -58,7 +58,7 @@ export default function LeadsViewer() {
                     size="sm" 
                     onClick={fetchLeads} 
                     disabled={isLoading}
-                    className="bg-cyan-500/20 border-cyan-500/50 hover:bg-cyan-500/30 text-cyan-400"
+                    className="bg-purple-500/20 border-purple-500/50 hover:bg-purple-500/30 text-purple-400"
                 >
                     <RefreshCw className={`h-4 w-4 ml-2 ${isLoading ? 'animate-spin' : ''}`} />
                     רענן
@@ -71,11 +71,11 @@ export default function LeadsViewer() {
                     <Table>
                         <TableHeader>
                             <TableRow className="border-gray-700 hover:bg-gray-800/50">
-                                <TableHead className="text-cyan-400">תאריך</TableHead>
-                                <TableHead className="text-cyan-400">שם</TableHead>
-                                <TableHead className="text-cyan-400">אימייל</TableHead>
-                                <TableHead className="text-cyan-400">טלפון</TableHead>
-                                <TableHead className="text-cyan-400">הודעה</TableHead>
+                                <TableHead className="text-purple-400">תאריך</TableHead>
+                                <TableHead className="text-purple-400">שם</TableHead>
+                                <TableHead className="text-purple-400">אימייל</TableHead>
+                                <TableHead className="text-purple-400">טלפון</TableHead>
+                                <TableHead className="text-purple-400">הודעה</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>

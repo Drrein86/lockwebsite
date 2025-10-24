@@ -49,8 +49,8 @@ export default function MapPage() {
 
     const getTypeColor = (type) => {
         switch (type) {
-            case 'תיבת דואר': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
-            case 'לוקר חכם': return 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30';
+            case 'תיבת דואר': return 'bg-violet-500/20 text-violet-400 border-violet-500/30';
+            case 'לוקר חכם': return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
             case 'עמדת מכירה': return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
             case 'מחסן חכם': return 'bg-orange-500/20 text-orange-400 border-orange-500/30';
             default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
@@ -61,11 +61,11 @@ export default function MapPage() {
         <div dir="rtl" className="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 min-h-screen relative overflow-hidden">
             {/* Background decorations */}
             <motion.div 
-                className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"
+                className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"
                 animate={floatingAnimation}
             />
             <motion.div 
-                className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"
+                className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-violet-500/5 rounded-full blur-3xl"
                 animate={{...floatingAnimation, transition: {...floatingAnimation.transition, delay: 2}}}
             />
 
@@ -81,17 +81,17 @@ export default function MapPage() {
                         }}
                     >
                         <motion.div variants={fadeIn} className="mb-6">
-                            <div className="inline-block bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-4 mb-6">
-                                <MapPin className="w-16 h-16 text-cyan-400 mx-auto" />
+                            <div className="inline-block bg-gradient-to-r from-purple-500/20 to-violet-500/20 backdrop-blur-sm rounded-2xl p-4 mb-6">
+                                <MapPin className="w-16 h-16 text-purple-400 mx-auto" />
                             </div>
                         </motion.div>
                         
-                        <motion.h1 variants={fadeIn} className="text-5xl md:text-6xl font-black text-white mb-6 bg-gradient-to-r from-white via-cyan-100 to-cyan-400 bg-clip-text text-transparent">
+                        <motion.h1 variants={fadeIn} className="text-5xl md:text-6xl font-black text-white mb-6 bg-gradient-to-r from-white via-purple-100 to-purple-400 bg-clip-text text-transparent">
                             מפת הלוקרים שלנו
                         </motion.h1>
                         
                         <motion.div variants={fadeIn} className="mb-8">
-                            <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 mx-auto rounded-full"></div>
+                            <div className="w-32 h-1 bg-gradient-to-r from-purple-500 to-violet-500 mx-auto rounded-full"></div>
                         </motion.div>
                         
                         <motion.p variants={fadeIn} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -137,7 +137,7 @@ export default function MapPage() {
                                             whileHover={{ scale: 1.2 }}
                                             onClick={() => setSelectedLocation(location)}
                                         >
-                                            <div className="bg-cyan-500 rounded-full p-2 shadow-lg cursor-pointer transform hover:scale-110 transition-transform">
+                                            <div className="bg-purple-500 rounded-full p-2 shadow-lg cursor-pointer transform hover:scale-110 transition-transform">
                                                 <MapPin className="w-4 h-4 text-white" />
                                             </div>
                                         </motion.div>
@@ -154,7 +154,7 @@ export default function MapPage() {
                                 transition={{ duration: 0.8 }}
                             >
                                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                                    <Navigation className="w-8 h-8 text-cyan-400" />
+                                    <Navigation className="w-8 h-8 text-purple-400" />
                                     מיקומים פעילים
                                 </h2>
                                 
@@ -180,14 +180,14 @@ export default function MapPage() {
                                                 whileHover={{ scale: 1.02 }}
                                                 className={`bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 cursor-pointer ${
                                                     selectedLocation?.id === location.id 
-                                                        ? 'border-cyan-500/50 bg-cyan-500/10' 
+                                                        ? 'border-purple-500/50 bg-purple-500/10' 
                                                         : 'border-gray-700/50 hover:border-gray-600/50'
                                                 }`}
                                                 onClick={() => setSelectedLocation(location)}
                                             >
                                                 <div className="flex items-start justify-between mb-3">
                                                     <h3 className="text-xl font-bold text-white">{location.name}</h3>
-                                                    <MapPin className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                                                    <MapPin className="w-5 h-5 text-purple-400 flex-shrink-0" />
                                                 </div>
                                                 
                                                 <p className="text-gray-400 mb-3">{location.address}</p>
@@ -216,11 +216,11 @@ export default function MapPage() {
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8, delay: 0.3 }}
-                                className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-3xl p-8 border border-cyan-500/20"
+                                className="bg-gradient-to-r from-purple-500/10 to-violet-500/10 backdrop-blur-sm rounded-3xl p-8 border border-purple-500/20"
                             >
                                 <h3 className="text-2xl font-bold text-white mb-6 text-center">רוצים לוקר במיקום שלכם?</h3>
                                 <div className="space-y-4 text-center">
-                                    <div className="flex items-center justify-center gap-3 text-cyan-400">
+                                    <div className="flex items-center justify-center gap-3 text-purple-400">
                                         <Mail className="w-5 h-5" />
                                         <span>Automated.locker@gmail.com</span>
                                     </div>

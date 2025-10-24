@@ -10,8 +10,8 @@ export default function FinalCTA() {
     return (
         <section className="py-32 bg-gradient-to-r from-gray-900 via-black to-gray-900 relative overflow-hidden" id="contact-cta">
             <div className="absolute inset-0">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+                <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+                <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl"></div>
             </div>
 
             <div className="container mx-auto px-6 text-center relative z-10">
@@ -36,7 +36,7 @@ export default function FinalCTA() {
                             <Link to={createPageUrl('Contact')}>
                                 <Button 
                                     size="lg" 
-                                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold px-16 py-8 rounded-2xl text-xl shadow-2xl shadow-cyan-500/25 border-0"
+                                    className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white font-semibold px-16 py-8 rounded-2xl text-xl shadow-2xl shadow-purple-500/25 border-0"
                                     aria-label="בואו נתחיל - קבל הצעת מחיר ללוקרים חכמים"
                                 >
                                     בואו נתחיל
@@ -55,7 +55,7 @@ export default function FinalCTA() {
                         transition={{ duration: 0.8, delay: 0.5 }}
                     >
                         <div className="flex items-center justify-center gap-3 text-gray-300">
-                            <MapPin className="w-5 h-5 text-cyan-400" />
+                            <MapPin className="w-5 h-5 text-purple-400" />
                             <div>
                                 <div className="text-sm text-gray-500">איזור שירות</div>
                                 <span>רמת גן, תל אביב וכל הארץ</span>
@@ -63,7 +63,7 @@ export default function FinalCTA() {
                         </div>
                         
                         <div className="flex items-center justify-center gap-3 text-gray-300">
-                            <Clock className="w-5 h-5 text-cyan-400" />
+                            <Clock className="w-5 h-5 text-purple-400" />
                             <div>
                                 <div className="text-sm text-gray-500">זמינות</div>
                                 <span>24/7 מענה מהיר</span>

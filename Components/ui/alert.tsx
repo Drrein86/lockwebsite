@@ -17,7 +17,7 @@ export const Alert: React.FC<AlertProps> = ({
     success: 'bg-green-900/20 border-green-700 text-green-400',
     warning: 'bg-yellow-900/20 border-yellow-700 text-yellow-400',
     error: 'bg-red-900/20 border-red-700 text-red-400',
-    info: 'bg-cyan-900/20 border-cyan-700 text-cyan-400',
+    info: 'bg-purple-900/20 border-purple-700 text-purple-400',
   };
 
   const icons = {

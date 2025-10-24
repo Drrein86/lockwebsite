@@ -9,7 +9,7 @@ export default function Features() {
             icon: <Smartphone className="w-8 h-8" />,
             title: "שליטה מלאה מהנייד",
             description: "פתיחה מרחוק, קבלת קוד חד-פעמי ב-SMS או ניהול הרשאות דרך אפליקציה ייעודית וקלה לשימוש.",
-            color: "from-blue-400 to-cyan-500"
+            color: "from-violet-400 to-purple-500"
         },
         {
             icon: <Shield className="w-8 h-8" />,
@@ -43,7 +43,7 @@ export default function Features() {
                 >
                     <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
                         טכנולוגיה
-                        <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
                             מהעתיד
                         </span>
                     </h2>

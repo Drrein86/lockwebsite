@@ -120,7 +120,7 @@ export default function BlogPostsManager() {
     if (isLoading) {
         return (
             <div className="flex justify-center items-center py-12">
-                <Loader2 className="h-8 w-8 animate-spin text-cyan-400" />
+                <Loader2 className="h-8 w-8 animate-spin text-purple-400" />
             </div>
         );
     }
@@ -232,7 +232,7 @@ export default function BlogPostsManager() {
                             name="isActive" 
                             checked={currentPost.isActive} 
                             onChange={(e) => setCurrentPost(p => ({...p, isActive: e.target.checked}))} 
-                            className="w-5 h-5 text-cyan-500 bg-gray-700 border-gray-600 rounded focus:ring-cyan-500"
+                            className="w-5 h-5 text-purple-500 bg-gray-700 border-gray-600 rounded focus:ring-purple-500"
                         />
                         <label htmlFor="isActivePost" className="text-white font-medium cursor-pointer">
                             פרסם מאמר זה באתר (פעיל)
@@ -242,7 +242,7 @@ export default function BlogPostsManager() {
                     <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-700">
                         <Button 
                             type="submit" 
-                            className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold"
+                            className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white font-bold"
                         >
                             💾 שמור מאמר
                         </Button>
@@ -269,7 +269,7 @@ export default function BlogPostsManager() {
                 </div>
                 <Button 
                     onClick={handleNew}
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold shadow-lg"
+                    className="bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white font-bold shadow-lg"
                 >
                     <Plus className="ml-2 h-5 w-5" /> מאמר חדש
                 </Button>
@@ -278,7 +278,7 @@ export default function BlogPostsManager() {
             {posts.length === 0 ? (
                 <div className="text-center py-12 bg-gray-800/30 rounded-xl border border-gray-700">
                     <p className="text-gray-400 mb-4">אין מאמרים עדיין</p>
-                    <Button onClick={handleNew} variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10">
+                    <Button onClick={handleNew} variant="outline" className="border-purple-500/50 text-purple-400 hover:bg-purple-500/10">
                         <Plus className="ml-2 h-4 w-4" /> צור מאמר ראשון
                     </Button>
                 </div>
@@ -287,7 +287,7 @@ export default function BlogPostsManager() {
                     {posts.map(post => (
                         <div 
                             key={post.id} 
-                            className="p-4 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-300 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3"
+                            className="p-4 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-purple-500/50 transition-all duration-300 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3"
                         >
                             <div className="flex-1">
                                 <h3 className="text-lg font-bold text-white mb-1">{post.title}</h3>
@@ -299,7 +299,7 @@ export default function BlogPostsManager() {
                                     variant="outline" 
                                     size="sm" 
                                     onClick={() => handleEdit(post)}
-                                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10"
+                                    className="border-purple-500/50 text-purple-400 hover:bg-purple-500/10"
                                 >
                                     <Edit className="h-4 w-4 ml-1" /> ערוך
                                 </Button>

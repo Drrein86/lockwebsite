@@ -47,7 +47,7 @@ const AccessibilityMenu: React.FC<AccessibilityMenuProps> = ({ settings, onSetti
       {/* Accessibility Button */}
       <motion.button
         onClick={toggleMenu}
-        className="fixed left-4 bottom-4 z-50 p-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+        className="fixed left-4 bottom-4 z-50 p-4 bg-gradient-to-r from-purple-500 to-violet-600 text-white rounded-full shadow-lg hover:from-purple-600 hover:to-violet-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         aria-label="תפריט נגישות"
@@ -64,13 +64,13 @@ const AccessibilityMenu: React.FC<AccessibilityMenuProps> = ({ settings, onSetti
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.3 }}
-            className="fixed left-4 bottom-24 z-50 w-80 bg-gray-900 border-2 border-cyan-500 rounded-2xl shadow-2xl p-6"
+            className="fixed left-4 bottom-24 z-50 w-80 bg-gray-900 border-2 border-purple-500 rounded-2xl shadow-2xl p-6"
             dir="rtl"
           >
             {/* Header */}
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-2">
-                <Accessibility className="w-6 h-6 text-cyan-400" />
+                <Accessibility className="w-6 h-6 text-purple-400" />
                 <h3 className="text-xl font-bold text-white">תפריט נגישות</h3>
               </div>
               <button
@@ -112,7 +112,7 @@ const AccessibilityMenu: React.FC<AccessibilityMenuProps> = ({ settings, onSetti
                 onClick={toggleHighContrast}
                 className={`w-full flex items-center justify-between p-3 rounded-lg transition-all ${
                   settings.highContrast
-                    ? 'bg-cyan-500 text-white'
+                    ? 'bg-purple-500 text-white'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
                 aria-label="ניגודיות גבוהה"
@@ -135,7 +135,7 @@ const AccessibilityMenu: React.FC<AccessibilityMenuProps> = ({ settings, onSetti
                 onClick={toggleHighlightLinks}
                 className={`w-full flex items-center justify-between p-3 rounded-lg transition-all ${
                   settings.highlightLinks
-                    ? 'bg-cyan-500 text-white'
+                    ? 'bg-purple-500 text-white'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                 }`}
                 aria-label="הדגשת קישורים"

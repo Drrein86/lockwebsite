@@ -51,12 +51,12 @@ function Header() {
                     {/* LEFT - Logo */}
                     <div className="flex-shrink-0">
                         <Link to={createPageUrl('Home')} className="flex items-center gap-3 hover:scale-105 transition-transform duration-300" title="לוקרים חכמים אוטומטיים - דף הבית">
-                            <div className="p-2 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/50">
+                            <div className="p-2 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 shadow-lg shadow-purple-500/50">
                                 <Box className="w-7 h-7 text-white" />
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-xl md:text-2xl font-black text-white leading-none">Lockey24</span>
-                                <span className="text-xs text-cyan-400 font-medium hidden sm:block">לוקרים חכמים</span>
+                                <span className="text-xs text-purple-400 font-medium hidden sm:block">לוקרים חכמים</span>
                             </div>
                         </Link>
                     </div>
@@ -73,13 +73,13 @@ function Header() {
                                         title={link.seoTitle}
                                         className={`relative px-2 lg:px-3 xl:px-4 py-2 text-xs lg:text-sm font-semibold transition-all duration-300 rounded-lg whitespace-nowrap ${
                                             isActive
-                                                ? 'text-white bg-cyan-500/20'
+                                                ? 'text-white bg-purple-500/20'
                                                 : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                         }`}
                                     >
                                         {link.title}
                                         {isActive && (
-                                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500"></span>
+                                            <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 to-violet-500"></span>
                                         )}
                                     </Link>
                                 );
@@ -91,14 +91,14 @@ function Header() {
                                 title="פאנל ניהול - מערכת ניהול האתר"
                                 className={`relative px-2 lg:px-3 xl:px-4 py-2 text-xs lg:text-sm font-semibold transition-all duration-300 rounded-lg flex items-center gap-1 lg:gap-2 whitespace-nowrap ${
                                     location.pathname === createPageUrl('Admin')
-                                        ? 'text-white bg-cyan-500/20'
+                                        ? 'text-white bg-purple-500/20'
                                         : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                                 }`}
                             >
                                 <Settings className="w-3 lg:w-4 h-3 lg:h-4" />
                                 <span>ניהול</span>
                                 {location.pathname === createPageUrl('Admin') && (
-                                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500"></span>
+                                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-400 to-violet-500"></span>
                                 )}
                             </Link>
                         </div>
@@ -108,7 +108,7 @@ function Header() {
                     <div className="flex-shrink-0">
                         {/* Desktop CTA Button */}
                         <Link to={createPageUrl('Contact')} title="קבל הצעת מחיר ללוקר חכם" className="hidden md:block">
-                            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 lg:px-6 py-2 lg:py-2.5 rounded-xl text-xs lg:text-base font-bold hover:from-cyan-600 hover:to-blue-700 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 shadow-lg transform hover:scale-105 whitespace-nowrap">
+                            <button className="bg-gradient-to-r from-purple-500 to-violet-600 text-white px-3 lg:px-6 py-2 lg:py-2.5 rounded-xl text-xs lg:text-base font-bold hover:from-purple-600 hover:to-violet-700 hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 shadow-lg transform hover:scale-105 whitespace-nowrap">
                                 קבל הצעת מחיר
                             </button>
                         </Link>
@@ -116,7 +116,7 @@ function Header() {
                         {/* Mobile Hamburger */}
                         <button
                             onClick={toggleMenu}
-                            className="md:hidden p-3 rounded-xl text-white bg-gradient-to-br from-cyan-500/20 to-blue-600/20 hover:from-cyan-500/30 hover:to-blue-600/30 border border-cyan-500/30 transition-all duration-300 shadow-lg"
+                            className="md:hidden p-3 rounded-xl text-white bg-gradient-to-br from-purple-500/20 to-violet-600/20 hover:from-purple-500/30 hover:to-violet-600/30 border border-purple-500/30 transition-all duration-300 shadow-lg"
                             aria-label={isOpen ? 'סגור תפריט' : 'פתח תפריט'}
                         >
                             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -152,7 +152,7 @@ function Header() {
                                                 onClick={closeMenu}
                                                 className={`block px-5 py-4 text-base font-semibold rounded-xl transition-all duration-300 ${
                                                     isActive
-                                                        ? 'text-white bg-gradient-to-r from-cyan-500/30 to-blue-600/30 border-r-4 border-cyan-400 shadow-lg shadow-cyan-500/20'
+                                                        ? 'text-white bg-gradient-to-r from-purple-500/30 to-violet-600/30 border-r-4 border-purple-400 shadow-lg shadow-purple-500/20'
                                                         : isAdminLink
                                                             ? 'text-orange-400 hover:text-orange-300 hover:bg-orange-400/10 hover:border-r-4 hover:border-orange-400'
                                                             : 'text-gray-300 hover:text-white hover:bg-gray-800/50 hover:border-r-4 hover:border-gray-600'
@@ -163,7 +163,7 @@ function Header() {
                                                         {link.icon && <link.icon className="w-5 h-5" />}
                                                         <span>{link.title}</span>
                                                     </div>
-                                                    <ChevronRight className={`w-5 h-5 transition-transform ${isActive ? 'text-cyan-400' : ''}`} />
+                                                    <ChevronRight className={`w-5 h-5 transition-transform ${isActive ? 'text-purple-400' : ''}`} />
                                                 </div>
                                             </Link>
                                         </motion.div>
@@ -177,7 +177,7 @@ function Header() {
                                     transition={{ delay: navLinks.length * 0.05 + 0.1 }}
                                 >
                                     <Link to={createPageUrl('Contact')} onClick={closeMenu} title="קבל הצעת מחיר ללוקר חכם">
-                                        <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-4 rounded-xl font-bold hover:from-cyan-600 hover:to-blue-700 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 transform hover:scale-[1.02]">
+                                        <button className="w-full bg-gradient-to-r from-purple-500 to-violet-600 text-white px-6 py-4 rounded-xl font-bold hover:from-purple-600 hover:to-violet-700 hover:shadow-xl hover:shadow-purple-500/30 transition-all duration-300 transform hover:scale-[1.02]">
                                             📞 קבל הצעת מחיר
                                         </button>
                                     </Link>
@@ -198,12 +198,12 @@ function Footer() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
                     <div className="lg:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="p-2 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 shadow-lg shadow-cyan-500/50">
+                            <div className="p-2 rounded-xl bg-gradient-to-br from-purple-500 to-violet-600 shadow-lg shadow-purple-500/50">
                                 <Box className="w-8 h-8 text-white" />
                             </div>
                             <div>
                                 <span className="text-2xl font-black text-white">Lockey24</span>
-                                <div className="text-sm text-cyan-400">לוקרים חכמים אוטומטיים לעתיד</div>
+                                <div className="text-sm text-purple-400">לוקרים חכמים אוטומטיים לעתיד</div>
                             </div>
                         </div>
                         <p className="text-lg leading-relaxed mb-6 max-w-lg text-gray-300">
@@ -218,13 +218,13 @@ function Footer() {
                         </div>
 
                         <div className="flex flex-wrap gap-3">
-                            <div className="px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30">
+                            <div className="px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-purple-500/20 to-violet-600/20 border border-purple-500/30">
                                 ✓ אפליקציה כלולה
                             </div>
-                            <div className="px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30">
+                            <div className="px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-purple-500/20 to-violet-600/20 border border-purple-500/30">
                                 ✓ תחזוקה שוטפת
                             </div>
-                            <div className="px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-cyan-500/20 to-blue-600/20 border border-cyan-500/30">
+                            <div className="px-4 py-2 rounded-full text-xs sm:text-sm font-bold text-white bg-gradient-to-r from-purple-500/20 to-violet-600/20 border border-purple-500/30">
                                 ✓ התקנה מקצועית
                             </div>
                         </div>
@@ -238,9 +238,9 @@ function Footer() {
                                     <Link
                                         to={link.url}
                                         title={link.seoTitle}
-                                        className="hover:text-cyan-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400"
+                                        className="hover:text-purple-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400"
                                     >
-                                        <ChevronRight className="w-4 h-4 text-cyan-500" />
+                                        <ChevronRight className="w-4 h-4 text-purple-500" />
                                         {link.title}
                                     </Link>
                                 </li>
@@ -249,9 +249,9 @@ function Footer() {
                                 <Link
                                     to={createPageUrl('Admin')}
                                     title="מערכת ניהול לוקרים חכמים"
-                                    className="hover:text-cyan-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400"
+                                    className="hover:text-purple-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400"
                                 >
-                                    <ChevronRight className="w-4 h-4 text-cyan-500" />
+                                    <ChevronRight className="w-4 h-4 text-purple-500" />
                                     מערכת ניהול
                                 </Link>
                             </li>
@@ -262,52 +262,52 @@ function Footer() {
                         <h3 className="text-lg lg:text-xl font-bold text-white mb-4 lg:mb-6">שירותים ומוצרים</h3>
                         <ul className="space-y-3">
                             <li>
-                                <Link to={createPageUrl('Services')} className="hover:text-cyan-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
-                                    <ChevronRight className="w-4 h-4 text-cyan-500" />
+                                <Link to={createPageUrl('Services')} className="hover:text-purple-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
+                                    <ChevronRight className="w-4 h-4 text-purple-500" />
                                     לוקרים חכמים להשכרה
                                 </Link>
                             </li>
                             <li>
-                                <Link to={createPageUrl('Products')} className="hover:text-cyan-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
-                                    <ChevronRight className="w-4 h-4 text-cyan-500" />
+                                <Link to={createPageUrl('Products')} className="hover:text-purple-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
+                                    <ChevronRight className="w-4 h-4 text-purple-500" />
                                     לוקרים אוטומטיים למכירה
                                 </Link>
                             </li>
                             <li>
-                                <Link to={createPageUrl('Services')} className="hover:text-cyan-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
-                                    <ChevronRight className="w-4 h-4 text-cyan-500" />
+                                <Link to={createPageUrl('Services')} className="hover:text-purple-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
+                                    <ChevronRight className="w-4 h-4 text-purple-500" />
                                     תיבות דואר אוטומטיות
                                 </Link>
                             </li>
                             <li>
-                                <Link to={createPageUrl('Blog')} className="hover:text-cyan-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
-                                    <ChevronRight className="w-4 h-4 text-cyan-500" />
+                                <Link to={createPageUrl('Blog')} className="hover:text-purple-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
+                                    <ChevronRight className="w-4 h-4 text-purple-500" />
                                     מדריכים ובלוג
                                 </Link>
                             </li>
                             <li>
-                                <Link to={createPageUrl('Map')} className="hover:text-cyan-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
-                                    <ChevronRight className="w-4 h-4 text-cyan-500" />
+                                <Link to={createPageUrl('Map')} className="hover:text-purple-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
+                                    <ChevronRight className="w-4 h-4 text-purple-500" />
                                     מפת לוקרים בישראל
                                 </Link>
                             </li>
                             <li>
-                                <Link to={createPageUrl('About')} className="hover:text-cyan-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
-                                    <ChevronRight className="w-4 h-4 text-cyan-500" />
+                                <Link to={createPageUrl('About')} className="hover:text-purple-400 hover:translate-x-1 transition-all duration-300 flex items-center gap-2 text-gray-400">
+                                    <ChevronRight className="w-4 h-4 text-purple-500" />
                                     אודות החברה
                                 </Link>
                             </li>
                         </ul>
 
                         <h4 className="text-lg font-bold text-white mt-8 mb-4 flex items-center gap-2">
-                            <Phone className="w-5 h-5 text-cyan-400" />
+                            <Phone className="w-5 h-5 text-purple-400" />
                             צרו קשר
                         </h4>
                         <ul className="space-y-4">
                             {/* Removed Email from Footer */}
                             <li className="flex items-center gap-3 group hover:translate-x-1 transition-transform">
-                                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 group-hover:border-cyan-500/50 transition-colors">
-                                    <MapPin className="w-5 h-5 text-cyan-400" />
+                                <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500/20 to-violet-600/20 border border-purple-500/30 group-hover:border-purple-500/50 transition-colors">
+                                    <MapPin className="w-5 h-5 text-purple-400" />
                                 </div>
                                 <div>
                                     <div className="text-xs text-gray-500 mb-1">איזור השירות</div>
@@ -315,8 +315,8 @@ function Footer() {
                                 </div>
                             </li>
                             <li className="flex items-center gap-3 group hover:translate-x-1 transition-transform">
-                                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 group-hover:border-cyan-500/50 transition-colors">
-                                    <Phone className="w-5 h-5 text-cyan-400" />
+                                <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500/20 to-violet-600/20 border border-purple-500/30 group-hover:border-purple-500/50 transition-colors">
+                                    <Phone className="w-5 h-5 text-purple-400" />
                                 </div>
                                 <div>
                                     <div className="text-xs text-gray-500 mb-1">זמינות</div>
@@ -334,15 +334,15 @@ function Footer() {
                             <span className="block mt-2 text-xs text-gray-500">לוקרים חכמים אוטומטיים למכירה והשכרה בישראל 🇮🇱</span>
                         </p>
                         <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
-                            <Link to={createPageUrl('Contact')} className="hover:text-cyan-400 transition-colors font-medium">
+                            <Link to={createPageUrl('Contact')} className="hover:text-purple-400 transition-colors font-medium">
                                 קבע פגישת ייעוץ
                             </Link>
                             <span className="text-gray-700">|</span>
-                            <Link to={createPageUrl('Products')} className="hover:text-cyan-400 transition-colors font-medium">
+                            <Link to={createPageUrl('Products')} className="hover:text-purple-400 transition-colors font-medium">
                                 קטלוג מוצרים
                             </Link>
                             <span className="text-gray-700">|</span>
-                            <Link to={createPageUrl('Services')} className="hover:text-cyan-400 transition-colors font-medium">
+                            <Link to={createPageUrl('Services')} className="hover:text-purple-400 transition-colors font-medium">
                                 שירותים
                             </Link>
                         </div>
@@ -810,7 +810,7 @@ function MaintenancePage() {
             {/* Animated background */}
             <div className="absolute inset-0 overflow-hidden">
                 <motion.div
-                    className="absolute w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
+                    className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
                     animate={{
                         x: [0, 100, 0],
                         y: [0, 50, 0],
@@ -823,7 +823,7 @@ function MaintenancePage() {
                     style={{ left: '10%', top: '10%' }}
                 />
                 <motion.div
-                    className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"
+                    className="absolute w-96 h-96 bg-violet-500/10 rounded-full blur-3xl"
                     animate={{
                         x: [0, -100, 0],
                         y: [0, -50, 0],
@@ -848,16 +848,16 @@ function MaintenancePage() {
                     <motion.div
                         animate={{ rotate: [0, 360] }}
                         transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                        className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-2xl border border-cyan-500/30"
+                        className="bg-gradient-to-r from-purple-500/20 to-violet-500/20 p-6 rounded-2xl border border-purple-500/30"
                     >
-                        <Settings className="w-16 h-16 text-cyan-400" />
+                        <Settings className="w-16 h-16 text-purple-400" />
                     </motion.div>
                     <motion.div
                         animate={{ rotate: [0, -360] }}
                         transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                        className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 p-6 rounded-2xl border border-blue-500/30"
+                        className="bg-gradient-to-r from-violet-500/20 to-purple-500/20 p-6 rounded-2xl border border-violet-500/30"
                     >
-                        <Clock className="w-16 h-16 text-blue-400" />
+                        <Clock className="w-16 h-16 text-violet-400" />
                     </motion.div>
                 </motion.div>
 
@@ -869,7 +869,7 @@ function MaintenancePage() {
                 >
                     <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
                         האתר סגור זמנית
-                        <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mt-2">
+                        <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent mt-2">
                             לשיפוצים
                         </span>
                     </h1>
@@ -886,7 +886,7 @@ function MaintenancePage() {
                         animate={{ scale: [1, 1.05, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
                     >
-                        <Clock className="w-5 h-5 text-cyan-400" />
+                        <Clock className="w-5 h-5 text-purple-400" />
                         <span className="text-gray-300">נחזור בקרוב...</span>
                     </motion.div>
 
@@ -894,7 +894,7 @@ function MaintenancePage() {
                     <div className="pt-8 border-t border-gray-800">
                         <div className="flex items-center justify-center gap-3 mb-4">
                             <div className="p-2 rounded-xl bg-white">
-                                <svg className="w-8 h-8 text-cyan-500" viewBox="0 0 24 24" fill="currentColor">
+                                <svg className="w-8 h-8 text-purple-500" viewBox="0 0 24 24" fill="currentColor">
                                     <rect x="3" y="3" width="7" height="7" rx="1" />
                                     <rect x="14" y="3" width="7" height="7" rx="1" />
                                     <rect x="3" y="14" width="7" height="7" rx="1" />

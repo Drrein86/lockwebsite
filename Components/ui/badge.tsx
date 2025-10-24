@@ -16,7 +16,7 @@ export const Badge: React.FC<BadgeProps> = ({
     success: 'bg-green-900/50 text-green-400 border-green-700',
     warning: 'bg-yellow-900/50 text-yellow-400 border-yellow-700',
     danger: 'bg-red-900/50 text-red-400 border-red-700',
-    info: 'bg-cyan-900/50 text-cyan-400 border-cyan-700',
+    info: 'bg-purple-900/50 text-purple-400 border-purple-700',
   };
 
   return (

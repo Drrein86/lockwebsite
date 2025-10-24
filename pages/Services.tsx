@@ -43,7 +43,7 @@ export default function ServicesPage() {
                     >
                         <h1 className="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
                             פתרונות לוקרים חכמים
-                            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                            <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
                                 לכל עסק ומטרה
                             </span>
                         </h1>
@@ -56,7 +56,7 @@ export default function ServicesPage() {
                             <div className="bg-green-600 text-white px-6 py-3 rounded-full font-bold">
                                 ✓ זמינות 24/7
                             </div>
-                            <div className="bg-blue-600 text-white px-6 py-3 rounded-full font-bold">
+                            <div className="bg-violet-600 text-white px-6 py-3 rounded-full font-bold">
                                 ✓ פתיחה מהסלולרי
                             </div>
                             <div className="bg-purple-600 text-white px-6 py-3 rounded-full font-bold">
@@ -65,7 +65,7 @@ export default function ServicesPage() {
                         </div>
 
                         <Link to={createPageUrl('Contact')}>
-                            <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold text-xl px-12 py-6 rounded-2xl">
+                            <Button size="lg" className="bg-gradient-to-r from-purple-500 to-violet-600 text-black font-bold text-xl px-12 py-6 rounded-2xl">
                                 <ArrowRight className="ml-3 h-6 w-6" />
                                 קבל הצעת מחיר עכשיו
                             </Button>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                                     onClick={() => setSelectedServiceId(service.id)}
                                     className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                                         selectedServiceId === service.id
-                                            ? 'bg-cyan-500 text-black'
+                                            ? 'bg-purple-500 text-black'
                                             : 'bg-gray-800 text-white hover:bg-gray-700'
                                     }`}
                                 >
@@ -114,7 +114,7 @@ export default function ServicesPage() {
                                 <h2 className="text-4xl font-bold text-white mb-4">
                                     {currentService.title}
                                 </h2>
-                                <h3 className="text-xl text-cyan-400 mb-6 font-semibold">
+                                <h3 className="text-xl text-purple-400 mb-6 font-semibold">
                                     {currentService.subtitle}
                                 </h3>
                                 <p className="text-gray-300 text-lg mb-8 leading-relaxed">
@@ -133,15 +133,15 @@ export default function ServicesPage() {
                                     </ul>
                                 </div>
 
-                                <div className="bg-gradient-to-r from-cyan-900/30 to-blue-900/30 p-6 rounded-xl border border-cyan-500/20 mb-8">
-                                    <div className="text-3xl font-black text-cyan-400 mb-2">
+                                <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 p-6 rounded-xl border border-purple-500/20 mb-8">
+                                    <div className="text-3xl font-black text-purple-400 mb-2">
                                         {currentService.price}
                                     </div>
                                     <p className="text-gray-400">כולל התקנה, תחזוקה ותמיכה טכנית</p>
                                 </div>
 
                                 <Link to={createPageUrl('Contact')}>
-                                    <Button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold px-8 py-4 rounded-xl text-lg">
+                                    <Button className="bg-gradient-to-r from-purple-500 to-violet-600 text-black font-bold px-8 py-4 rounded-xl text-lg">
                                         בקש הצעת מחיר מותאמת
                                         <ArrowRight className="ml-2 h-5 w-5" />
                                     </Button>
@@ -162,7 +162,7 @@ export default function ServicesPage() {
                             <h4 className="text-2xl font-bold text-white mb-6">מתאים במיוחד עבור:</h4>
                             <div className="flex flex-wrap justify-center gap-4">
                                 {currentService.targetAudience.map((audience, index) => (
-                                    <div key={index} className="bg-gray-800 px-6 py-3 rounded-full text-cyan-400 font-semibold">
+                                    <div key={index} className="bg-gray-800 px-6 py-3 rounded-full text-purple-400 font-semibold">
                                         {audience}
                                     </div>
                                 ))}
@@ -172,22 +172,22 @@ export default function ServicesPage() {
                 </div>
             </section>
 
-            <section className="py-16 bg-gradient-to-r from-cyan-900 to-blue-900">
+            <section className="py-16 bg-gradient-to-r from-purple-900 to-blue-900">
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-4xl font-bold text-white mb-6">
                         מוכנים להתחיל?
                     </h2>
-                    <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
+                    <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
                         קבלו ייעוץ חינם ללא התחייבות והצעת מחיר מותאמת אישית לצרכים שלכם
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Link to={createPageUrl('Contact')}>
-                            <Button size="lg" className="bg-white text-cyan-900 font-bold px-8 py-4 rounded-xl hover:bg-gray-100">
+                            <Button size="lg" className="bg-white text-purple-900 font-bold px-8 py-4 rounded-xl hover:bg-gray-100">
                                 צור קשר עכשיו
                             </Button>
                         </Link>
                         <Link to={createPageUrl('Products')}>
-                            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-cyan-900 px-8 py-4 rounded-xl">
+                            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 rounded-xl">
                                 צפה במוצרים
                             </Button>
                         </Link>

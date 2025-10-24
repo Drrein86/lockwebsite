@@ -24,7 +24,7 @@ function PostDetail({ postId, onBack }) {
     }, [postId]);
 
     if (isLoading) {
-        return <div className="flex justify-center items-center py-20"><Loader2 className="h-8 w-8 animate-spin text-cyan-400" /></div>;
+        return <div className="flex justify-center items-center py-20"><Loader2 className="h-8 w-8 animate-spin text-purple-400" /></div>;
     }
 
     if (!post) {
@@ -48,7 +48,7 @@ function PostDetail({ postId, onBack }) {
                         {post.title}
                     </h1>
                     {post.subtitle && (
-                        <h2 className="text-xl text-cyan-400 mb-6 font-semibold">
+                        <h2 className="text-xl text-purple-400 mb-6 font-semibold">
                             {post.subtitle}
                         </h2>
                     )}
@@ -90,7 +90,7 @@ function PostDetail({ postId, onBack }) {
                             {post.tags.map(tag => (
                                 <span 
                                     key={tag} 
-                                    className="bg-cyan-900/30 text-cyan-400 px-3 py-1 rounded-full text-sm"
+                                    className="bg-purple-900/30 text-purple-400 px-3 py-1 rounded-full text-sm"
                                     role="listitem"
                                 >
                                     {tag}
@@ -99,7 +99,7 @@ function PostDetail({ postId, onBack }) {
                         </div>
                     )}
 
-                    <div className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 p-6 rounded-xl border border-cyan-500/20">
+                    <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 p-6 rounded-xl border border-purple-500/20">
                         <h3 className="text-2xl font-bold text-white mb-4">
                             רוצים לדעת עוד?
                         </h3>
@@ -108,7 +108,7 @@ function PostDetail({ postId, onBack }) {
                         </p>
                         <Link to={createPageUrl('Contact')}>
                             <Button 
-                                className="bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold"
+                                className="bg-gradient-to-r from-purple-500 to-violet-600 text-black font-bold"
                                 aria-label="צור קשר לייעוץ נוסף"
                             >
                                 צור קשר עכשיו
@@ -147,7 +147,7 @@ export default function BlogPage() {
                 <div className="container mx-auto px-6 text-center">
                     <h1 className="text-5xl md:text-7xl font-black text-white mb-6">
                         בלוג לוקרים חכמים
-                        <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
                             מדריכים ועדכונים
                         </span>
                     </h1>
@@ -186,7 +186,7 @@ export default function BlogPage() {
                                         }
                                     }}
                                 >
-                                    <Card className="bg-gray-900 border-gray-800 hover:border-cyan-500/30 transition-all duration-300 cursor-pointer h-full flex flex-col">
+                                    <Card className="bg-gray-900 border-gray-800 hover:border-purple-500/30 transition-all duration-300 cursor-pointer h-full flex flex-col">
                                         {post.imageUrl && (
                                             <div className="relative overflow-hidden rounded-t-lg">
                                                 <img 
@@ -226,7 +226,7 @@ export default function BlogPage() {
                                         <CardContent>
                                             <Button 
                                                 variant="outline" 
-                                                className="w-full border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black"
+                                                className="w-full border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-black"
                                                 aria-label={`קרא את המאמר: ${post.title}`}
                                             >
                                                 קרא עוד
@@ -241,18 +241,18 @@ export default function BlogPage() {
                 </div>
             </section>
 
-            <section className="py-16 bg-gradient-to-r from-cyan-900 to-blue-900" role="complementary">
+            <section className="py-16 bg-gradient-to-r from-purple-900 to-blue-900" role="complementary">
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold text-white mb-4">
                         הישארו מעודכנים
                     </h2>
-                    <p className="text-cyan-100 mb-8 max-w-2xl mx-auto">
+                    <p className="text-purple-100 mb-8 max-w-2xl mx-auto">
                         קבלו עדכונים על מאמרים חדשים, טיפים מקצועיים וחידושים בעולם הלוקרים החכמים
                     </p>
                     <Link to={createPageUrl('Contact')}>
                         <Button 
                             size="lg" 
-                            className="bg-white text-cyan-900 font-bold hover:bg-gray-100"
+                            className="bg-white text-purple-900 font-bold hover:bg-gray-100"
                             aria-label="הרשמו לקבלת עדכונים"
                         >
                             הרשמו לעדכונים

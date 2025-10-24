@@ -66,7 +66,7 @@ export default function Pricing() {
                 >
                     <h2 className="text-5xl md:text-6xl font-black text-white mb-6">
                         בחרו את
-                        <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        <span className="block bg-gradient-to-r from-purple-400 to-violet-500 bg-clip-text text-transparent">
                             התוכנית שלכם
                         </span>
                     </h2>
@@ -81,7 +81,7 @@ export default function Pricing() {
                             key={index}
                             className={`relative rounded-3xl p-8 border backdrop-blur-sm ${
                                 plan.popular 
-                                    ? 'border-cyan-400 bg-gradient-to-b from-cyan-500/10 to-blue-600/10' 
+                                    ? 'border-purple-400 bg-gradient-to-b from-purple-500/10 to-violet-600/10' 
                                     : 'border-gray-800 bg-gray-900/50'
                             }`}
                             initial={{ opacity: 0, y: 50 }}
@@ -92,7 +92,7 @@ export default function Pricing() {
                         >
                             {plan.popular && (
                                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                                    <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
+                                    <div className="bg-gradient-to-r from-purple-500 to-violet-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                                         הכי פופולרי ומומלץ
                                     </div>
                                 </div>
@@ -111,7 +111,7 @@ export default function Pricing() {
                                 <Button 
                                     className={`w-full py-4 rounded-2xl font-semibold text-lg ${
                                         plan.popular
-                                            ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-2xl shadow-cyan-500/25'
+                                            ? 'bg-gradient-to-r from-purple-500 to-violet-600 hover:from-purple-600 hover:to-violet-700 text-white shadow-2xl shadow-purple-500/25'
                                             : 'bg-gray-800 hover:bg-gray-700 text-white border border-gray-700'
                                     }`}
                                     aria-label={`בחר תוכנית ${plan.name} - ${plan.price}₪ ${plan.period}`}
